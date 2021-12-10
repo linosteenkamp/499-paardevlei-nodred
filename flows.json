@@ -88,6 +88,14 @@
         "env": []
     },
     {
+        "id": "0f8b7fdf05a28744",
+        "type": "tab",
+        "label": "Cube",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "12be0d6bf38dae3a",
         "type": "mqtt-broker",
         "name": "",
@@ -3695,6 +3703,206 @@
         "broker": "12be0d6bf38dae3a",
         "x": 840,
         "y": 540,
+        "wires": []
+    },
+    {
+        "id": "2548bf8fee908476",
+        "type": "mqtt in",
+        "z": "0f8b7fdf05a28744",
+        "name": "",
+        "topic": "zigbee2mqtt/cube",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "12be0d6bf38dae3a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "3faf3bf901d324b4"
+            ]
+        ]
+    },
+    {
+        "id": "3faf3bf901d324b4",
+        "type": "json",
+        "z": "0f8b7fdf05a28744",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "3d385a3af6b2bddd",
+                "377b729e08df3573"
+            ]
+        ]
+    },
+    {
+        "id": "3d385a3af6b2bddd",
+        "type": "switch",
+        "z": "0f8b7fdf05a28744",
+        "name": "",
+        "property": "payload.action",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "wakeup",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "slide",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "rotate_right",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "rotate_left",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "flip90",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "flip180",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 6,
+        "x": 590,
+        "y": 200,
+        "wires": [
+            [
+                "b98d432d57e0ad72"
+            ],
+            [
+                "b98d432d57e0ad72"
+            ],
+            [
+                "b98d432d57e0ad72"
+            ],
+            [
+                "b98d432d57e0ad72"
+            ],
+            [
+                "b98d432d57e0ad72"
+            ],
+            [
+                "b98d432d57e0ad72"
+            ]
+        ]
+    },
+    {
+        "id": "377b729e08df3573",
+        "type": "switch",
+        "z": "0f8b7fdf05a28744",
+        "name": "",
+        "property": "payload.side",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 590,
+        "y": 400,
+        "wires": [
+            [
+                "1b49bc0396026b1e"
+            ],
+            [
+                "1b49bc0396026b1e"
+            ],
+            [
+                "1b49bc0396026b1e"
+            ],
+            [
+                "1b49bc0396026b1e"
+            ],
+            [
+                "1b49bc0396026b1e"
+            ],
+            [
+                "1b49bc0396026b1e"
+            ]
+        ]
+    },
+    {
+        "id": "b98d432d57e0ad72",
+        "type": "debug",
+        "z": "0f8b7fdf05a28744",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1b49bc0396026b1e",
+        "type": "debug",
+        "z": "0f8b7fdf05a28744",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 400,
         "wires": []
     }
 ]
