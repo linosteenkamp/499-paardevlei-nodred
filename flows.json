@@ -3105,22 +3105,6 @@
         ]
     },
     {
-        "id": "c81c77a66f9b29e1",
-        "type": "json",
-        "z": "1677362e797afd58",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 370,
-        "y": 560,
-        "wires": [
-            [
-                "c21ab83fcae4ba10"
-            ]
-        ]
-    },
-    {
         "id": "9886a4351f3fed80",
         "type": "mqtt out",
         "z": "1677362e797afd58",
@@ -3137,111 +3121,6 @@
         "x": 1370,
         "y": 360,
         "wires": []
-    },
-    {
-        "id": "69c59880e9393764",
-        "type": "rbe",
-        "z": "1677362e797afd58",
-        "name": "",
-        "func": "rbei",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload",
-        "topi": "topic",
-        "x": 1130,
-        "y": 560,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1425a21b7a1599d2",
-        "type": "change",
-        "z": "1677362e797afd58",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{ \"state_bottom\": \"OFF\" }",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 920,
-        "y": 620,
-        "wires": [
-            [
-                "69c59880e9393764"
-            ]
-        ]
-    },
-    {
-        "id": "8c4c4b07fc388ecc",
-        "type": "change",
-        "z": "1677362e797afd58",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "{ \"state_bottom\": \"ON\" }",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 920,
-        "y": 500,
-        "wires": [
-            [
-                "69c59880e9393764"
-            ]
-        ]
-    },
-    {
-        "id": "c21ab83fcae4ba10",
-        "type": "switch",
-        "z": "1677362e797afd58",
-        "name": "",
-        "property": "payload.state_bottom",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "ON",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "OFF",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 550,
-        "y": 560,
-        "wires": [
-            [
-                "8c4c4b07fc388ecc"
-            ],
-            [
-                "1425a21b7a1599d2"
-            ]
-        ]
     },
     {
         "id": "2096714393d7c690",
@@ -3427,7 +3306,7 @@
         "type": "rbe",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "rbei",
+        "func": "rbe",
         "gap": "",
         "start": "",
         "inout": "out",
