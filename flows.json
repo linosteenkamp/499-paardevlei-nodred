@@ -3376,7 +3376,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var result = null\n\nif (msg.payload.state_bottom != flow.sensor.guestBathroomSwitch.state_bottom)\n{\n    result = { state_bottom: msg.payload.state_bottom }\n}\n\nreturn result;",
+        "func": "var sensor = flow.get(\"sensor\");\nvar result = null\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    result = { state_bottom: msg.payload.state_bottom }\n}\n\nreturn result;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
