@@ -3358,7 +3358,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar status\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    status = (msg.payload.state_bottom == \"ON\") ? { state_bottom: \"ON\"} : { state_bottom: \"OFF\"}\n}\n\nnode.warn(status);\n\nreturn status;",
+        "func": "var sensor = flow.get(\"sensor\");\nvar status\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    status = (msg.payload.state_bottom == \"ON\") ? { payload: { state_bottom: \"ON\" } } : {\n        payload: { state_bottom: \"OFF\"}}\n}\n\nnode.warn(status);\n\nreturn status;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
