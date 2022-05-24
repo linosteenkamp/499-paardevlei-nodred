@@ -3119,7 +3119,7 @@
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
         "x": 1370,
-        "y": 360,
+        "y": 380,
         "wires": []
     },
     {
@@ -3334,7 +3334,9 @@
         "x": 590,
         "y": 380,
         "wires": [
-            []
+            [
+                "6ce0c8f0b3c781fe"
+            ]
         ]
     },
     {
@@ -3358,7 +3360,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar status\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    status = (msg.payload.state_bottom == \"ON\") ? { payload: { state_bottom: \"ON\" } } : {\n        payload: { state_bottom: \"OFF\"}}\n}\n\nnode.warn(status);\n\nreturn status;",
+        "func": "var sensor = flow.get(\"sensor\");\nvar status\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    status = (msg.payload.state_bottom == \"ON\") ? { payload: { state_bottom: \"ON\" } } : {\n        payload: { state_bottom: \"OFF\"}}\n}\n\nreturn status;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3368,26 +3370,28 @@
         "y": 280,
         "wires": [
             [
-                "ee02e43e53c4e810",
-                "9c9db88af25cc0ec"
+                "ee02e43e53c4e810"
             ]
         ]
     },
     {
-        "id": "9c9db88af25cc0ec",
-        "type": "debug",
+        "id": "6ce0c8f0b3c781fe",
+        "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1340,
-        "y": 200,
-        "wires": []
+        "func": "var sensor = flow.get(\"sensor\");\nvar status\n\nif (msg.payload.state_bottom != sensor.masterBathroomSwitch.state_bottom) {\n    status = (msg.payload.state_bottom == \"ON\") ? { payload: { state_bottom: \"ON\" } } : {\n        payload: { state_bottom: \"OFF\" }\n    }\n}\n\nreturn status;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 380,
+        "wires": [
+            [
+                "9886a4351f3fed80"
+            ]
+        ]
     },
     {
         "id": "91ca56617895b720",
