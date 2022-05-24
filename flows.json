@@ -3358,17 +3358,18 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar result\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    result = (msg.payload.state_bottom == \"ON\") ? { state_bottom: \"ON\"} : { state_bottom: \"OFF\"}\n}\n\nnode.warn(result);\n\nreturn result;",
+        "func": "var sensor = flow.get(\"sensor\");\nvar status\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    status = (msg.payload.state_bottom == \"ON\") ? { state_bottom: \"ON\"} : { state_bottom: \"OFF\"}\n}\n\n// node.warn(status);\n\nreturn status;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 980,
+        "x": 920,
         "y": 280,
         "wires": [
             [
-                "ee02e43e53c4e810"
+                "fbe8f3c9588363ca",
+                "4d2ea92dd7bbe9df"
             ]
         ]
     },
@@ -3384,9 +3385,26 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1140,
-        "y": 200,
+        "x": 1330,
+        "y": 180,
         "wires": []
+    },
+    {
+        "id": "fbe8f3c9588363ca",
+        "type": "json",
+        "z": "1677362e797afd58",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1110,
+        "y": 280,
+        "wires": [
+            [
+                "ee02e43e53c4e810",
+                "4d2ea92dd7bbe9df"
+            ]
+        ]
     },
     {
         "id": "91ca56617895b720",
