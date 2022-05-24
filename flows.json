@@ -3279,7 +3279,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
+        "x": 960,
         "y": 140,
         "wires": [
             []
@@ -3358,7 +3358,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar result\n\nnode.warn(msg.payload);\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    result = (msg.payload.state_bottom == \"ON\") ? { state_bottom: \"ON\"} : { state_bottom: \"OFF\"}\n    node.warn(result);\n}\n\nreturn result;",
+        "func": "var sensor = flow.get(\"sensor\");\nvar result\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    result = (msg.payload.state_bottom == \"ON\") ? { state_bottom: \"ON\"} : { state_bottom: \"OFF\"}\n}\n\nnode.warn(result);\n\nreturn result;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
