@@ -3100,7 +3100,8 @@
         "y": 420,
         "wires": [
             [
-                "0e01629792043619"
+                "0e01629792043619",
+                "b703b9bb53499d28"
             ]
         ]
     },
@@ -3144,9 +3145,7 @@
         "x": 630,
         "y": 180,
         "wires": [
-            [
-                "d743de6a028e6d81"
-            ]
+            []
         ]
     },
     {
@@ -3221,7 +3220,8 @@
         "y": 280,
         "wires": [
             [
-                "0e01629792043619"
+                "0e01629792043619",
+                "b2dd79cea422f8b1"
             ]
         ]
     },
@@ -3266,12 +3266,8 @@
         "x": 550,
         "y": 340,
         "wires": [
-            [
-                "53c4972f5ca629eb"
-            ],
-            [
-                "8fd0c8c6a0cbb6ad"
-            ]
+            [],
+            []
         ]
     },
     {
@@ -3345,9 +3341,7 @@
         "x": 630,
         "y": 60,
         "wires": [
-            [
-                "d743de6a028e6d81"
-            ]
+            []
         ]
     },
     {
@@ -3411,6 +3405,56 @@
         "x": 1330,
         "y": 200,
         "wires": []
+    },
+    {
+        "id": "b2dd79cea422f8b1",
+        "type": "change",
+        "z": "1677362e797afd58",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensor.masterBathroomSwitch",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 480,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b703b9bb53499d28",
+        "type": "change",
+        "z": "1677362e797afd58",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensor.guestBathroomSwitch",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 420,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "91ca56617895b720",
