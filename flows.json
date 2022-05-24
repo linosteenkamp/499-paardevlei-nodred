@@ -3273,7 +3273,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar status;\n\nif (sensor.masterBathroomHumidity.humidity >= 80 || sensor.guestBathroomHumidity.humidity >= 80)\n{\n    status = {state_bottom: \"ON\"};\n}\nelse if (sensor.masterBathroomHumidity.humidity <= 70 && sensor.guestBathroomHumidity.humidity <= 70)\n{\n    status = {state_bottom: \"OFF\"};\n}\n\nreturn status;",
+        "func": "var sensor = flow.get(\"sensor\");\nvar status;\n\nif (sensor.masterBathroomHumidity.humidity >= 80 || sensor.guestBathroomHumidity.humidity >= 80)\n{\n    status = {payload: {state_bottom: \"ON\"}};\n}\nelse if (sensor.masterBathroomHumidity.humidity <= 70 && sensor.guestBathroomHumidity.humidity <= 70)\n{\n    status = {payload: {state_bottom: \"OFF\"}};\n}\n\nreturn status;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3282,7 +3282,9 @@
         "x": 960,
         "y": 140,
         "wires": [
-            []
+            [
+                "ee02e43e53c4e810"
+            ]
         ]
     },
     {
