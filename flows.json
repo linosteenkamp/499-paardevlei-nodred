@@ -3280,7 +3280,7 @@
         "finalize": "",
         "libs": [],
         "x": 900,
-        "y": 240,
+        "y": 140,
         "wires": [
             [
                 "5818c19d717dd546"
@@ -3299,7 +3299,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1330,
+        "x": 1130,
         "y": 200,
         "wires": []
     },
@@ -3326,7 +3326,7 @@
         "y": 280,
         "wires": [
             [
-                "d743de6a028e6d81"
+                "41e8e1b4bfc80c62"
             ]
         ]
     },
@@ -3352,9 +3352,7 @@
         "x": 590,
         "y": 380,
         "wires": [
-            [
-                "d743de6a028e6d81"
-            ]
+            []
         ]
     },
     {
@@ -3370,6 +3368,25 @@
         "wires": [
             [
                 "b703b9bb53499d28"
+            ]
+        ]
+    },
+    {
+        "id": "41e8e1b4bfc80c62",
+        "type": "function",
+        "z": "1677362e797afd58",
+        "name": "",
+        "func": "var result = null\n\nif (msg.payload.state_bottom != flow.sensor.guestBathroom.switch.state_bottom)\n{\n    result = { state_bottom: msg.payload.state_bottom }\n}\n\nreturn result;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 280,
+        "wires": [
+            [
+                "5818c19d717dd546"
             ]
         ]
     },
