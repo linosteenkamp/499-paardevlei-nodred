@@ -3119,7 +3119,7 @@
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
         "x": 1370,
-        "y": 380,
+        "y": 400,
         "wires": []
     },
     {
@@ -3362,7 +3362,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar status\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    status = (msg.payload.state_bottom == \"ON\") ? { payload: { state_bottom: \"ON\" } } : {\n        payload: { state_bottom: \"OFF\"}}\n}\n\nreturn status;",
+        "func": "var sensor = flow.get(\"sensor\");\nvar status\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    status = (msg.payload.state_bottom == \"ON\") ? { payload: { state_bottom: \"ON\" }} : {payload: { state_bottom: \"OFF\"}}\n}\n\nreturn status;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
