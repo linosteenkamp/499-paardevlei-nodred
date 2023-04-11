@@ -3357,7 +3357,9 @@
         "y": 400,
         "wires": [
             [
-                "7ec88958bb5549e4"
+                "7ec88958bb5549e4",
+                "abde687a98fb55f5",
+                "4c23fb0bd34ac14a"
             ]
         ]
     },
@@ -3513,6 +3515,40 @@
         "statusType": "auto",
         "x": 950,
         "y": 460,
+        "wires": []
+    },
+    {
+        "id": "abde687a98fb55f5",
+        "type": "debug",
+        "z": "1677362e797afd58",
+        "name": "gb-msg",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "4c23fb0bd34ac14a",
+        "type": "debug",
+        "z": "1677362e797afd58",
+        "name": "flow-mb",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "$flowContext(masterBathroomSwitch)",
+        "targetType": "jsonata",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 440,
+        "y": 600,
         "wires": []
     },
     {
