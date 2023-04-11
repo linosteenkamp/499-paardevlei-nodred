@@ -3298,7 +3298,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "\nreturn { payload: { state_bottom: msg.payload.state_bottom } }",
+        "func": "\nreturn { payload: { state_bottom: msg.payload.sensor.state_bottom } }",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
