@@ -3448,7 +3448,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nif (sensor == null) \n{\n    sensor = { state: msg.payload.sensor_bottom, stop: true}\n    flow.set(\"sensor\", sensor)\n    sensor = flow.get(\"sensor\");\n}\n\nif (sensor.state === msg.payload.sensor_bottom)\n{\n    sensor.state = msg.payload.sensor_bottom\n    sensor.stop = true\n}\nelse\n{\n    sensor.state = msg.payload.sensor_bottom\n    sensor.stop = false\n}\n\nflow.set(\"sensor\", sensor)\n\nmsg.payload = { sensor }\n\nreturn msg",
+        "func": "var sensor = flow.get(\"sensor\");\nif (sensor == null) \n{\n    node.warn(\"msg.payload.sensor_bottom = \" + msg.payload.sensor_bottom);\n    sensor = { state: msg.payload.sensor_bottom, stop: true}\n    flow.set(\"sensor\", sensor)\n    sensor = flow.get(\"sensor\");\n}\n\nif (sensor.state === msg.payload.sensor_bottom)\n{\n    sensor.state = msg.payload.sensor_bottom\n    sensor.stop = true\n}\nelse\n{\n    sensor.state = msg.payload.sensor_bottom\n    sensor.stop = false\n}\n\nflow.set(\"sensor\", sensor)\n\nmsg.payload = { sensor }\n\nreturn msg",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
