@@ -3447,7 +3447,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var sensor = flow.get(\"state\");\nif (sensor == null) \n{\n    flow.set(\"state\", msg.payload.state)\n}\nreturn msg;",
+        "func": "var sensor = flow.get(\"state\");\nnode.warn(sensor);\nif (sensor == null) \n{\n    flow.set(\"state\", msg.payload.state)\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
