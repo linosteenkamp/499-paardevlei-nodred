@@ -3285,7 +3285,8 @@
         "y": 140,
         "wires": [
             [
-                "ee02e43e53c4e810"
+                "ee02e43e53c4e810",
+                "d1347f1eee5ced82"
             ]
         ]
     },
@@ -3403,12 +3404,13 @@
         "id": "a22a9c4348c1ed5f",
         "type": "debug",
         "z": "1677362e797afd58",
-        "name": "",
+        "name": "mb-humidity",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 970,
@@ -3419,12 +3421,13 @@
         "id": "1cfeca6c482b75f9",
         "type": "debug",
         "z": "1677362e797afd58",
-        "name": "",
+        "name": "gb-humidity",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 970,
@@ -3452,7 +3455,7 @@
         "id": "fc8a73b0f837bbed",
         "type": "debug",
         "z": "1677362e797afd58",
-        "name": "Before",
+        "name": "gb",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -3463,6 +3466,23 @@
         "statusType": "auto",
         "x": 950,
         "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d1347f1eee5ced82",
+        "type": "debug",
+        "z": "1677362e797afd58",
+        "name": "HumidityChanged",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1360,
+        "y": 140,
         "wires": []
     },
     {
