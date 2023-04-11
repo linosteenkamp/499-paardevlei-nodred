@@ -3079,7 +3079,8 @@
         "y": 280,
         "wires": [
             [
-                "8a468154e52114bc"
+                "8a468154e52114bc",
+                "adf8a477139af0bd"
             ]
         ]
     },
@@ -3123,34 +3124,6 @@
         "wires": []
     },
     {
-        "id": "2096714393d7c690",
-        "type": "change",
-        "z": "1677362e797afd58",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "sensor.guestBathroomHumidity",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 660,
-        "wires": [
-            [
-                "d743de6a028e6d81",
-                "c57441c7efd4f789"
-            ]
-        ]
-    },
-    {
         "id": "e301a79830fddf64",
         "type": "mqtt in",
         "z": "1677362e797afd58",
@@ -3183,7 +3156,8 @@
         "y": 200,
         "wires": [
             [
-                "8a468154e52114bc"
+                "8a468154e52114bc",
+                "adf8a477139af0bd"
             ]
         ]
     },
@@ -3243,107 +3217,6 @@
         ]
     },
     {
-        "id": "9802666db87aa7ab",
-        "type": "change",
-        "z": "1677362e797afd58",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "sensor.masterBathroomHumidity",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 580,
-        "wires": [
-            [
-                "d743de6a028e6d81",
-                "be1cc0db70162f55"
-            ]
-        ]
-    },
-    {
-        "id": "d743de6a028e6d81",
-        "type": "function",
-        "z": "1677362e797afd58",
-        "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar status;\n\n// node.warn('before: state = ' + sensor.state + ', hgb = ' + sensor.guestBathroomHumidity.humidity + ', hmb = ' + sensor.masterBathroomHumidity.humidity)\n\nif (sensor.guestBathroomHumidity == null)\n{\n    sensor.guestBathroomHumidity = { humidity: 0 }\n}\nif (sensor.masterBathroomHumidity == null) {\n    sensor.masterBathroomHumidity = {humidity: 0}\n}\nif (sensor.state == null) {\n    sensor.state == \"OFF\"\n}\n\nnode.warn('after: state = ' + sensor.state + ', hgb = ' + sensor.guestBathroomHumidity.humidity + ', hmb = ' + sensor.masterBathroomHumidity.humidity)\n\nif (sensor.masterBathroomHumidity.humidity >= 80 || sensor.guestBathroomHumidity.humidity >= 80 || sensor.state == \"OFF\")\n{\n    status = {payload: {state_bottom: \"ON\"}};\n}\nelse if (sensor.masterBathroomHumidity.humidity <= 70 && sensor.guestBathroomHumidity.humidity <= 70 && sensor.state == \"ON\")\n{\n    status = {payload: {state_bottom: \"OFF\"}};\n}\n\nreturn status;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 760,
-        "y": 620,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "b2dd79cea422f8b1",
-        "type": "change",
-        "z": "1677362e797afd58",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "sensor.state",
-                "pt": "flow",
-                "to": "payload.state_bottom",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 500,
-        "wires": [
-            [
-                "2c620e0bc09d3870",
-                "d743de6a028e6d81"
-            ]
-        ]
-    },
-    {
-        "id": "b703b9bb53499d28",
-        "type": "change",
-        "z": "1677362e797afd58",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "sensor.state",
-                "pt": "flow",
-                "to": "payload.state_bottom",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 740,
-        "wires": [
-            [
-                "c335b575d0ca6f74",
-                "d743de6a028e6d81"
-            ]
-        ]
-    },
-    {
         "id": "71e6ed7a2869a9cf",
         "type": "json",
         "z": "1677362e797afd58",
@@ -3360,74 +3233,6 @@
         ]
     },
     {
-        "id": "2c620e0bc09d3870",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "smb",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "be1cc0db70162f55",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "hmb",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "c57441c7efd4f789",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "hgb",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "c335b575d0ca6f74",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "sgb",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 740,
-        "wires": []
-    },
-    {
         "id": "adf8a477139af0bd",
         "type": "debug",
         "z": "1677362e797afd58",
@@ -3440,7 +3245,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
+        "x": 320,
         "y": 240,
         "wires": []
     },
@@ -3524,23 +3329,6 @@
         ]
     },
     {
-        "id": "52bc88bdd644916b",
-        "type": "template",
-        "z": "1677362e797afd58",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
-        "output": "str",
-        "x": 940,
-        "y": 500,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "8fc131f44c298a89",
         "type": "function",
         "z": "1677362e797afd58",
@@ -3576,8 +3364,7 @@
         "y": 240,
         "wires": [
             [
-                "059b5acdbf507e0f",
-                "adf8a477139af0bd"
+                "059b5acdbf507e0f"
             ]
         ]
     },
