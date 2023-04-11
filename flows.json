@@ -3475,7 +3475,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 850,
+        "x": 1010,
         "y": 80,
         "wires": []
     },
@@ -3495,6 +3495,26 @@
         "repair": false,
         "outputs": 1,
         "x": 670,
+        "y": 80,
+        "wires": [
+            [
+                "7a93799b1e771cec"
+            ]
+        ]
+    },
+    {
+        "id": "7a93799b1e771cec",
+        "type": "rbe",
+        "z": "1677362e797afd58",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 830,
         "y": 80,
         "wires": [
             [
