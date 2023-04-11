@@ -3080,8 +3080,7 @@
         "y": 320,
         "wires": [
             [
-                "8a468154e52114bc",
-                "2096714393d7c690"
+                "8a468154e52114bc"
             ]
         ]
     },
@@ -3158,8 +3157,7 @@
         "y": 240,
         "wires": [
             [
-                "8a468154e52114bc",
-                "9802666db87aa7ab"
+                "8a468154e52114bc"
             ]
         ]
     },
@@ -3333,56 +3331,6 @@
             [
                 "059b5acdbf507e0f"
             ]
-        ]
-    },
-    {
-        "id": "2096714393d7c690",
-        "type": "change",
-        "z": "1677362e797afd58",
-        "name": "Set flow.sensor",
-        "rules": [
-            {
-                "t": "set",
-                "p": "guestBathroomHumidity",
-                "pt": "flow",
-                "to": "payload.humidity",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "9802666db87aa7ab",
-        "type": "change",
-        "z": "1677362e797afd58",
-        "name": "Set flow.sensor",
-        "rules": [
-            {
-                "t": "set",
-                "p": "masterBathroomHumidity",
-                "pt": "flow",
-                "to": "payload.humidity",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 520,
-        "y": 180,
-        "wires": [
-            []
         ]
     },
     {
