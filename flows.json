@@ -3359,40 +3359,6 @@
         ]
     },
     {
-        "id": "41e8e1b4bfc80c62",
-        "type": "function",
-        "z": "1677362e797afd58",
-        "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar status\n\nif (msg.payload.state_bottom != sensor.guestBathroomSwitch.state_bottom)\n{\n    status = (msg.payload.state_bottom == \"ON\") ? { payload: { state_bottom: \"ON\" }} : {payload: { state_bottom: \"OFF\"}}\n}\n\nreturn status;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 960,
-        "y": 40,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6ce0c8f0b3c781fe",
-        "type": "function",
-        "z": "1677362e797afd58",
-        "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar status\n\nif (msg.payload.state_bottom != sensor.masterBathroomSwitch.state_bottom) {\n    status = (msg.payload.state_bottom == \"ON\") ? { payload: { state_bottom: \"ON\" } } : {\n        payload: { state_bottom: \"OFF\" }\n    }\n}\n\nreturn status;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 960,
-        "y": 280,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "91ca56617895b720",
         "type": "mqtt in",
         "z": "cd6fbb87958d052e",
