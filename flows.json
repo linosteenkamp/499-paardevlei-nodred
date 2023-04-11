@@ -3305,7 +3305,7 @@
         "y": 180,
         "wires": [
             [
-                "ca7cf66e27bfd6d6"
+                "ee02e43e53c4e810"
             ]
         ]
     },
@@ -3360,23 +3360,6 @@
         "statusType": "auto",
         "x": 700,
         "y": 280,
-        "wires": []
-    },
-    {
-        "id": "ca7cf66e27bfd6d6",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "Result",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1230,
-        "y": 180,
         "wires": []
     },
     {
