@@ -3060,10 +3060,11 @@
         "rh": 0,
         "inputs": 0,
         "x": 130,
-        "y": 280,
+        "y": 360,
         "wires": [
             [
-                "79bf777e985ca8cc"
+                "79bf777e985ca8cc",
+                "2096714393d7c690"
             ]
         ]
     },
@@ -3076,11 +3077,10 @@
         "action": "",
         "pretty": false,
         "x": 330,
-        "y": 280,
+        "y": 360,
         "wires": [
             [
-                "8a468154e52114bc",
-                "adf8a477139af0bd"
+                "8a468154e52114bc"
             ]
         ]
     },
@@ -3119,8 +3119,8 @@
         "correl": "",
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
-        "x": 1230,
-        "y": 120,
+        "x": 1290,
+        "y": 160,
         "wires": []
     },
     {
@@ -3137,10 +3137,11 @@
         "rh": 0,
         "inputs": 0,
         "x": 130,
-        "y": 200,
+        "y": 280,
         "wires": [
             [
-                "01af32d059470e21"
+                "01af32d059470e21",
+                "9802666db87aa7ab"
             ]
         ]
     },
@@ -3153,11 +3154,10 @@
         "action": "",
         "pretty": false,
         "x": 330,
-        "y": 200,
+        "y": 280,
         "wires": [
             [
-                "8a468154e52114bc",
-                "adf8a477139af0bd"
+                "8a468154e52114bc"
             ]
         ]
     },
@@ -3175,8 +3175,8 @@
         "correl": "",
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
-        "x": 1220,
-        "y": 200,
+        "x": 1280,
+        "y": 240,
         "wires": []
     },
     {
@@ -3233,23 +3233,6 @@
         ]
     },
     {
-        "id": "adf8a477139af0bd",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "change",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 240,
-        "wires": []
-    },
-    {
         "id": "8ab95efe857e621a",
         "type": "function",
         "z": "1677362e797afd58",
@@ -3281,8 +3264,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1190,
-        "y": 160,
+        "x": 1250,
+        "y": 200,
         "wires": []
     },
     {
@@ -3300,8 +3283,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 670,
-        "y": 160,
+        "x": 730,
+        "y": 200,
         "wires": [
             [
                 "7a93799b1e771cec"
@@ -3320,8 +3303,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 830,
-        "y": 160,
+        "x": 890,
+        "y": 200,
         "wires": [
             [
                 "8fc131f44c298a89"
@@ -3339,8 +3322,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1000,
-        "y": 160,
+        "x": 1060,
+        "y": 200,
         "wires": [
             [
                 "bddba9322f784730",
@@ -3361,11 +3344,79 @@
         "finalize": "",
         "libs": [],
         "x": 500,
-        "y": 240,
+        "y": 320,
         "wires": [
             [
-                "059b5acdbf507e0f"
+                "059b5acdbf507e0f",
+                "adf8a477139af0bd"
             ]
+        ]
+    },
+    {
+        "id": "adf8a477139af0bd",
+        "type": "debug",
+        "z": "1677362e797afd58",
+        "name": "change",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "2096714393d7c690",
+        "type": "change",
+        "z": "1677362e797afd58",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensor.guestBathroomHumidity",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9802666db87aa7ab",
+        "type": "change",
+        "z": "1677362e797afd58",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "sensor.masterBathroomHumidity",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 200,
+        "wires": [
+            []
         ]
     },
     {
