@@ -3118,8 +3118,8 @@
         "correl": "",
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
-        "x": 930,
-        "y": 80,
+        "x": 1230,
+        "y": 200,
         "wires": []
     },
     {
@@ -3165,7 +3165,7 @@
         "z": "1677362e797afd58",
         "name": "switch guest bathroom",
         "topic": "zigbee2mqtt/switch guest bathroom/set",
-        "qos": "",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
@@ -3244,7 +3244,9 @@
         "x": 500,
         "y": 80,
         "wires": [
-            []
+            [
+                "059b5acdbf507e0f"
+            ]
         ]
     },
     {
@@ -3305,7 +3307,8 @@
         "y": 280,
         "wires": [
             [
-                "ee02e43e53c4e810"
+                "ee02e43e53c4e810",
+                "9886a4351f3fed80"
             ]
         ]
     },
@@ -3327,40 +3330,6 @@
                 "059b5acdbf507e0f"
             ]
         ]
-    },
-    {
-        "id": "dc3f101bec48f3cc",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "Switch",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 690,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "14785e385fda874d",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "Humidity",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 640,
-        "y": 520,
-        "wires": []
     },
     {
         "id": "91ca56617895b720",
