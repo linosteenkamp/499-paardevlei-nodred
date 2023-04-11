@@ -3257,7 +3257,7 @@
         "type": "switch",
         "z": "1677362e797afd58",
         "name": "",
-        "property": "payload.stop",
+        "property": "sensor.stop",
         "propertyType": "msg",
         "rules": [
             {
