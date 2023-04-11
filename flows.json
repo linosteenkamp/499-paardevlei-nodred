@@ -3234,7 +3234,7 @@
         "y": 40,
         "wires": [
             [
-                "26858dd333849fc8"
+                "8ab95efe857e621a"
             ]
         ]
     },
@@ -3453,11 +3453,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
+        "x": 500,
         "y": 40,
         "wires": [
             [
-                "bddba9322f784730"
+                "059b5acdbf507e0f"
             ]
         ]
     },
@@ -3496,22 +3496,25 @@
         "wires": []
     },
     {
-        "id": "26858dd333849fc8",
-        "type": "rbe",
+        "id": "059b5acdbf507e0f",
+        "type": "switch",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": true,
-        "property": "payload",
-        "topi": "topic",
-        "x": 490,
+        "property": "payload.sensor.stop",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 670,
         "y": 40,
         "wires": [
             [
-                "8ab95efe857e621a"
+                "bddba9322f784730"
             ]
         ]
     },
