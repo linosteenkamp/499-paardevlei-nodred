@@ -3116,7 +3116,7 @@
         "correl": "",
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
-        "x": 1050,
+        "x": 1350,
         "y": 40,
         "wires": []
     },
@@ -3197,7 +3197,7 @@
         "correl": "",
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
-        "x": 1040,
+        "x": 1340,
         "y": 120,
         "wires": []
     },
@@ -3512,6 +3512,42 @@
         "property": "payload",
         "topi": "topic",
         "x": 830,
+        "y": 80,
+        "wires": [
+            [
+                "8fc131f44c298a89"
+            ]
+        ]
+    },
+    {
+        "id": "52bc88bdd644916b",
+        "type": "template",
+        "z": "1677362e797afd58",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 730,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8fc131f44c298a89",
+        "type": "function",
+        "z": "1677362e797afd58",
+        "name": "",
+        "func": "\nreturn { payload: { state_bottom: payload.state_bottom } }",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
         "y": 80,
         "wires": [
             [
