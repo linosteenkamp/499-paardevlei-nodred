@@ -3343,9 +3343,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "sensor.payload.guestBathroomHumidity",
+                "p": "guestBathroomHumidity",
                 "pt": "flow",
-                "to": "payload",
+                "to": "payload.humidity",
                 "tot": "msg"
             }
         ],
@@ -3368,9 +3368,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "sensor.payload.masterBathroomHumidity",
+                "p": "masterBathroomHumidity",
                 "pt": "flow",
-                "to": "payload",
+                "to": "payload.humidity",
                 "tot": "msg"
             }
         ],
