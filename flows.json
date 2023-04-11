@@ -3063,8 +3063,7 @@
         "y": 320,
         "wires": [
             [
-                "79bf777e985ca8cc",
-                "b797a1ace7b67df4"
+                "79bf777e985ca8cc"
             ]
         ]
     },
@@ -3140,8 +3139,7 @@
         "y": 240,
         "wires": [
             [
-                "01af32d059470e21",
-                "b797a1ace7b67df4"
+                "01af32d059470e21"
             ]
         ]
     },
@@ -3311,7 +3309,8 @@
         "wires": [
             [
                 "9886a4351f3fed80",
-                "ee02e43e53c4e810"
+                "ee02e43e53c4e810",
+                "ca7cf66e27bfd6d6"
             ]
         ]
     },
@@ -3336,34 +3335,19 @@
         ]
     },
     {
-        "id": "b797a1ace7b67df4",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 190,
-        "y": 280,
-        "wires": []
-    },
-    {
         "id": "dc3f101bec48f3cc",
         "type": "debug",
         "z": "1677362e797afd58",
-        "name": "",
+        "name": "Switch",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
+        "x": 690,
         "y": 80,
         "wires": []
     },
@@ -3371,16 +3355,34 @@
         "id": "14785e385fda874d",
         "type": "debug",
         "z": "1677362e797afd58",
-        "name": "",
+        "name": "Humidity",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
+        "x": 700,
         "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ca7cf66e27bfd6d6",
+        "type": "debug",
+        "z": "1677362e797afd58",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 180,
         "wires": []
     },
     {
