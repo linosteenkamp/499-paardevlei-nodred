@@ -3110,7 +3110,7 @@
         "z": "1677362e797afd58",
         "name": "switch master bedroom",
         "topic": "zigbee2mqtt/switch master bedroom/set",
-        "qos": "",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
