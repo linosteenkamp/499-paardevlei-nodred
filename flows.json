@@ -3440,8 +3440,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1000,
-        "y": 300,
+        "x": 680,
+        "y": 240,
         "wires": []
     },
     {
@@ -3534,8 +3534,8 @@
         "syntax": "mustache",
         "template": "This is the payload: {{payload}} !",
         "output": "str",
-        "x": 720,
-        "y": 300,
+        "x": 940,
+        "y": 500,
         "wires": [
             []
         ]
@@ -3576,7 +3576,8 @@
         "y": 240,
         "wires": [
             [
-                "059b5acdbf507e0f"
+                "059b5acdbf507e0f",
+                "adf8a477139af0bd"
             ]
         ]
     },
