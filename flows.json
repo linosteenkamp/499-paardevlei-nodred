@@ -3234,7 +3234,8 @@
         "y": 40,
         "wires": [
             [
-                "8ab95efe857e621a"
+                "8ab95efe857e621a",
+                "8d872ea7e4e8056d"
             ]
         ]
     },
@@ -3476,6 +3477,23 @@
         "statusType": "auto",
         "x": 690,
         "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8d872ea7e4e8056d",
+        "type": "debug",
+        "z": "1677362e797afd58",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 100,
         "wires": []
     },
     {
