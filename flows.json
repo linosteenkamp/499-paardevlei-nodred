@@ -3118,8 +3118,8 @@
         "correl": "",
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
-        "x": 1290,
-        "y": 140,
+        "x": 930,
+        "y": 80,
         "wires": []
     },
     {
@@ -3173,8 +3173,8 @@
         "correl": "",
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
-        "x": 1280,
-        "y": 220,
+        "x": 1220,
+        "y": 280,
         "wires": []
     },
     {
@@ -3262,8 +3262,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 730,
-        "y": 180,
+        "x": 670,
+        "y": 280,
         "wires": [
             [
                 "7a93799b1e771cec"
@@ -3282,8 +3282,8 @@
         "septopics": true,
         "property": "payload",
         "topi": "topic",
-        "x": 890,
-        "y": 180,
+        "x": 830,
+        "y": 280,
         "wires": [
             [
                 "8fc131f44c298a89"
@@ -3301,8 +3301,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1060,
-        "y": 180,
+        "x": 1000,
+        "y": 280,
         "wires": [
             [
                 "ee02e43e53c4e810"
@@ -3358,8 +3358,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 700,
-        "y": 280,
+        "x": 640,
+        "y": 520,
         "wires": []
     },
     {
