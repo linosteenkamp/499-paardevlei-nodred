@@ -3321,7 +3321,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar masterBathroomHumidity = flow.get(\"masterBathroomHumidity\") ?? 0\nvar guestBathroomHumidity = flow.get(\"guestBathroomHumidity\") ?? 0\n\nnode.warn(\"msg.topic = \" + msg.topic);\n\nif (sensor == null && msg.payload.humidity >= 80) {\n    sensor = { payload: { state_bottom: \"ON\", stop: true } }\n} else {\n    sensor = { payload: { state_bottom: \"OFF\", stop: true } }\n} \n\nvar state = (msg.payload.humidity >= 80) ? \"ON\" : \"OFF\"\n\nif (sensor.payload.state_bottom !== state) {\n    sensor.payload.state_bottom = state\n    sensor.payload.stop = true\n}\nelse {\n    sensor.payload.state_bottom = state\n    sensor.payload.stop = false\n}\n\nflow.set(\"sensor\", sensor)\n\nreturn sensor",
+        "func": "node.warn(\"msg.topic = \" + msg.topic);\nvar sensor = flow.get(\"sensor\");\nvar masterBathroomHumidity = flow.get(\"masterBathroomHumidity\") ?? 0\nvar guestBathroomHumidity = flow.get(\"guestBathroomHumidity\") ?? 0\n\n\nif (sensor == null && msg.payload.humidity >= 80) {\n    sensor = { payload: { state_bottom: \"ON\", stop: true } }\n} else {\n    sensor = { payload: { state_bottom: \"OFF\", stop: true } }\n} \n\nvar state = (msg.payload.humidity >= 80) ? \"ON\" : \"OFF\"\n\nif (sensor.payload.state_bottom !== state) {\n    sensor.payload.state_bottom = state\n    sensor.payload.stop = true\n}\nelse {\n    sensor.payload.state_bottom = state\n    sensor.payload.stop = false\n}\n\nflow.set(\"sensor\", sensor)\n\nreturn sensor",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
