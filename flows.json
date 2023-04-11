@@ -3100,7 +3100,7 @@
         "y": 400,
         "wires": [
             [
-                "71e6ed7a2869a9cf"
+                "417eff6bdd1ee524"
             ]
         ]
     },
@@ -3355,7 +3355,7 @@
         "y": 400,
         "wires": [
             [
-                "b703b9bb53499d28"
+                "7ec88958bb5549e4"
             ]
         ]
     },
@@ -3428,6 +3428,56 @@
         "x": 970,
         "y": 180,
         "wires": []
+    },
+    {
+        "id": "417eff6bdd1ee524",
+        "type": "delay",
+        "z": "1677362e797afd58",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 240,
+        "y": 480,
+        "wires": [
+            [
+                "71e6ed7a2869a9cf"
+            ]
+        ]
+    },
+    {
+        "id": "7ec88958bb5549e4",
+        "type": "switch",
+        "z": "1677362e797afd58",
+        "name": "",
+        "property": "payload.state_bottom",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "MasterBathroomSwitch.state_bottom",
+                "vt": "flow"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 480,
+        "wires": [
+            [
+                "b703b9bb53499d28"
+            ]
+        ]
     },
     {
         "id": "91ca56617895b720",
