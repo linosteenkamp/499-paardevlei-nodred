@@ -3060,7 +3060,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 130,
-        "y": 200,
+        "y": 420,
         "wires": [
             [
                 "79bf777e985ca8cc"
@@ -3076,7 +3076,7 @@
         "action": "",
         "pretty": false,
         "x": 330,
-        "y": 200,
+        "y": 420,
         "wires": [
             []
         ]
@@ -3095,7 +3095,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 120,
-        "y": 280,
+        "y": 120,
         "wires": [
             [
                 "71e6ed7a2869a9cf"
@@ -3162,7 +3162,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 130,
-        "y": 120,
+        "y": 340,
         "wires": [
             [
                 "01af32d059470e21"
@@ -3178,7 +3178,7 @@
         "action": "",
         "pretty": false,
         "x": 330,
-        "y": 120,
+        "y": 340,
         "wires": [
             []
         ]
@@ -3352,9 +3352,11 @@
         "action": "",
         "pretty": false,
         "x": 330,
-        "y": 280,
+        "y": 120,
         "wires": [
-            []
+            [
+                "8ab95efe857e621a"
+            ]
         ]
     },
     {
@@ -3454,7 +3456,7 @@
         "finalize": "",
         "libs": [],
         "x": 500,
-        "y": 40,
+        "y": 80,
         "wires": [
             [
                 "059b5acdbf507e0f"
@@ -3475,24 +3477,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 850,
-        "y": 40,
-        "wires": []
-    },
-    {
-        "id": "8d872ea7e4e8056d",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 510,
-        "y": 260,
+        "y": 80,
         "wires": []
     },
     {
@@ -3511,7 +3496,7 @@
         "repair": false,
         "outputs": 1,
         "x": 670,
-        "y": 40,
+        "y": 80,
         "wires": [
             [
                 "bddba9322f784730"
