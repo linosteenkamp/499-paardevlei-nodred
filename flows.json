@@ -3271,7 +3271,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nvar status;\n\nif (sensor.guestBathroomHumidity == null)\n{\n    sensor.guestBathroomHumidity = { humidity: 0 }\n}\nif (sensor.masterBathroomHumidity == null) {\n    sensor.masterBathroomHumidity = {humidity: 0}\n}\nif (sensor.state == null) {\n    sensor.state == \"OFF\"\n}\n\nif (sensor.masterBathroomHumidity.humidity >= 80 || sensor.guestBathroomHumidity.humidity >= 80 || sensor.state == \"ON\")\n{\n    status = {payload: {state_bottom: \"ON\"}};\n}\nelse if ((sensor.masterBathroomHumidity.humidity <= 70 && sensor.guestBathroomHumidity.humidity <= 70) || sensor.state == \"OFF\")\n{\n    status = {payload: {state_bottom: \"OFF\"}};\n}\n\nreturn status;",
+        "func": "var sensor = flow.get(\"sensor\");\nvar status;\n\nif (sensor.guestBathroomHumidity == null)\n{\n    sensor.guestBathroomHumidity = { humidity: 0 }\n}\nif (sensor.masterBathroomHumidity == null) {\n    sensor.masterBathroomHumidity = {humidity: 0}\n}\nif (sensor.state == null) {\n    sensor.state == \"OFF\"\n}\n\nif (sensor.masterBathroomHumidity.humidity >= 80 || sensor.guestBathroomHumidity.humidity >= 80 || sensor.state == \"ON\")\n{\n    status = {payload: {state_bottom: \"ON\"}};\n}\nelse if ((sensor.masterBathroomHumidity.humidity <= 70 && sensor.guestBathroomHumidity.humidity <= 70) || sensor.state == \"ON\")\n{\n    status = {payload: {state_bottom: \"OFF\"}};\n}\n\nreturn status;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
