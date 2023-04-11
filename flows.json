@@ -3234,7 +3234,7 @@
         "y": 40,
         "wires": [
             [
-                "bddba9322f784730"
+                "8ab95efe857e621a"
             ]
         ]
     },
@@ -3447,7 +3447,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "\nreturn msg;",
+        "func": "var sensor = flow.get(\"sensor\");\nif (sensor.state == null) \n{\n    sensor.state = msg.payload.state\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3456,7 +3456,9 @@
         "x": 500,
         "y": 40,
         "wires": [
-            []
+            [
+                "bddba9322f784730"
+            ]
         ]
     },
     {
@@ -3471,8 +3473,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 100,
+        "x": 690,
+        "y": 40,
         "wires": []
     },
     {
