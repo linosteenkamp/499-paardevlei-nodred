@@ -3277,12 +3277,12 @@
         "type": "rbe",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "rbe",
+        "func": "rbei",
         "gap": "",
         "start": "",
         "inout": "out",
-        "septopics": true,
-        "property": "payload",
+        "septopics": false,
+        "property": "payload.sensor.state_bottom",
         "topi": "topic",
         "x": 830,
         "y": 200,
@@ -3306,7 +3306,10 @@
         "x": 1000,
         "y": 200,
         "wires": [
-            []
+            [
+                "9886a4351f3fed80",
+                "ee02e43e53c4e810"
+            ]
         ]
     },
     {
