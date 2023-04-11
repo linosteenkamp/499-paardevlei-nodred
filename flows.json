@@ -3339,7 +3339,7 @@
         "id": "2096714393d7c690",
         "type": "change",
         "z": "1677362e797afd58",
-        "name": "",
+        "name": "Set flow.sensor",
         "rules": [
             {
                 "t": "set",
@@ -3354,7 +3354,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
+        "x": 360,
         "y": 440,
         "wires": [
             []
@@ -3364,7 +3364,7 @@
         "id": "9802666db87aa7ab",
         "type": "change",
         "z": "1677362e797afd58",
-        "name": "",
+        "name": "Set flow.sensor",
         "rules": [
             {
                 "t": "set",
@@ -3379,7 +3379,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 470,
+        "x": 360,
         "y": 200,
         "wires": [
             []
