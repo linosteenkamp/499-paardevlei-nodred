@@ -3174,7 +3174,7 @@
         "correl": "",
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
-        "x": 1220,
+        "x": 720,
         "y": 300,
         "wires": []
     },
@@ -3249,73 +3249,11 @@
         ]
     },
     {
-        "id": "059b5acdbf507e0f",
-        "type": "switch",
-        "z": "1677362e797afd58",
-        "name": "",
-        "property": "payload.sensor.stop",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 670,
-        "y": 300,
-        "wires": [
-            [
-                "7a93799b1e771cec"
-            ]
-        ]
-    },
-    {
-        "id": "7a93799b1e771cec",
-        "type": "rbe",
-        "z": "1677362e797afd58",
-        "name": "",
-        "func": "rbei",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "septopics": false,
-        "property": "payload.sensor.state_bottom",
-        "topi": "topic",
-        "x": 830,
-        "y": 300,
-        "wires": [
-            [
-                "8fc131f44c298a89"
-            ]
-        ]
-    },
-    {
-        "id": "8fc131f44c298a89",
-        "type": "function",
-        "z": "1677362e797afd58",
-        "name": "",
-        "func": "\nreturn { payload: { state_bottom: msg.payload.sensor.state_bottom } }",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1000,
-        "y": 300,
-        "wires": [
-            [
-                "ee02e43e53c4e810"
-            ]
-        ]
-    },
-    {
         "id": "8a468154e52114bc",
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var masterBathroomHumidity = flow.get(\"masterBathroomHumidity\") ?? 0\nvar guestBathroomHumidity = flow.get(\"guestBathroomHumidity\") ?? 0\nvar state = \"OFF\"\n\nif (msg.topic === \"zigbee2mqtt/humidity master bathroom\") {\n    masterBathroomHumidity = msg.payload.humidity\n    flow.set(\"masterBathroomHumidity\", msg.payload.humidity)\n}\n\nif (msg.topic === \"zigbee2mqtt/humidity guest bathroom\") {\n    guestBathroomHumidity = msg.payload.humidity\n    flow.set(\"guestBathroomHumidity\", msg.payload.humidity)\n}\n\nvar humidity = Math.max(masterBathroomHumidity, guestBathroomHumidity)\n\nif (humidity >= 80) state = \"ON\"\nif (humidity <= 70) state = \"OFF\"\n\nvar sensor = flow.get(\"sensor\") ?? { state_bottom: state, stop: false }\n\nif (sensor.state_bottom === state) {\n    sensor.stop = true\n}\nelse {\n    sensor.state_bottom = state\n    sensor.stop = false\n}\n\nflow.set(\"sensor\", sensor)\n\nreturn { payload: { sensor : sensor}}",
+        "func": "var masterBathroomHumidity = flow.get(\"masterBathroomHumidity\") ?? 0\nvar guestBathroomHumidity = flow.get(\"guestBathroomHumidity\") ?? 0\nvar state = \"OFF\"\n\nif (msg.topic === \"zigbee2mqtt/humidity master bathroom\") {\n    masterBathroomHumidity = msg.payload.humidity\n    flow.set(\"masterBathroomHumidity\", msg.payload.humidity)\n}\n\nif (msg.topic === \"zigbee2mqtt/humidity guest bathroom\") {\n    guestBathroomHumidity = msg.payload.humidity\n    flow.set(\"guestBathroomHumidity\", msg.payload.humidity)\n}\n\nvar humidity = Math.max(masterBathroomHumidity, guestBathroomHumidity)\n\nif (humidity >= 80) state = \"ON\"\nif (humidity <= 70) state = \"OFF\"\n\nreturn { payload: { state_bottom: state } }",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3325,8 +3263,8 @@
         "y": 300,
         "wires": [
             [
-                "059b5acdbf507e0f",
-                "fcf108761b6a5325"
+                "fcf108761b6a5325",
+                "ee02e43e53c4e810"
             ]
         ]
     },
