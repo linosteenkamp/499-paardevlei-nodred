@@ -3084,45 +3084,6 @@
         ]
     },
     {
-        "id": "fb0517d0fca64c51",
-        "type": "mqtt in",
-        "z": "1677362e797afd58",
-        "name": "switch guest bathroom",
-        "topic": "zigbee2mqtt/switch guest bathroom",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "12be0d6bf38dae3a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 120,
-        "y": 160,
-        "wires": [
-            [
-                "71e6ed7a2869a9cf"
-            ]
-        ]
-    },
-    {
-        "id": "9886a4351f3fed80",
-        "type": "mqtt out",
-        "z": "1677362e797afd58",
-        "name": "switch master bedroom",
-        "topic": "zigbee2mqtt/switch master bedroom/set",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "12be0d6bf38dae3a",
-        "x": 1230,
-        "y": 160,
-        "wires": []
-    },
-    {
         "id": "e301a79830fddf64",
         "type": "mqtt in",
         "z": "1677362e797afd58",
@@ -3177,76 +3138,6 @@
         "x": 720,
         "y": 300,
         "wires": []
-    },
-    {
-        "id": "f70679256f8ec3ec",
-        "type": "mqtt in",
-        "z": "1677362e797afd58",
-        "name": "switch master bedroom",
-        "topic": "zigbee2mqtt/switch master bedroom",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "12be0d6bf38dae3a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 120,
-        "y": 80,
-        "wires": [
-            [
-                "0e01629792043619"
-            ]
-        ]
-    },
-    {
-        "id": "0e01629792043619",
-        "type": "json",
-        "z": "1677362e797afd58",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 80,
-        "wires": [
-            [
-                "8ab95efe857e621a"
-            ]
-        ]
-    },
-    {
-        "id": "71e6ed7a2869a9cf",
-        "type": "json",
-        "z": "1677362e797afd58",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 160,
-        "wires": [
-            [
-                "8ab95efe857e621a"
-            ]
-        ]
-    },
-    {
-        "id": "8ab95efe857e621a",
-        "type": "function",
-        "z": "1677362e797afd58",
-        "name": "",
-        "func": "var sensor = flow.get(\"sensor\");\nif (sensor == null) \n{\n    sensor = { state_bottom: msg.payload.state_bottom, stop: true}\n}\n\nif (sensor.state_bottom === msg.payload.state_bottom)\n{\n    sensor.stop = true\n}\nelse\n{\n    sensor.state_bottom = msg.payload.state_bottom\n    sensor.stop = false\n}\n\nflow.set(\"sensor\", sensor)\n\nreturn { payload: {sensor: sensor}}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 500,
-        "y": 120,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "8a468154e52114bc",
