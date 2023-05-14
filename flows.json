@@ -3060,7 +3060,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 130,
-        "y": 320,
+        "y": 340,
         "wires": [
             [
                 "79bf777e985ca8cc"
@@ -3076,7 +3076,7 @@
         "action": "",
         "pretty": false,
         "x": 330,
-        "y": 320,
+        "y": 340,
         "wires": [
             [
                 "8a468154e52114bc"
@@ -3136,7 +3136,7 @@
         "rh": 0,
         "inputs": 0,
         "x": 130,
-        "y": 240,
+        "y": 260,
         "wires": [
             [
                 "01af32d059470e21"
@@ -3152,7 +3152,7 @@
         "action": "",
         "pretty": false,
         "x": 330,
-        "y": 240,
+        "y": 260,
         "wires": [
             [
                 "8a468154e52114bc"
@@ -3174,7 +3174,7 @@
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
         "x": 1220,
-        "y": 240,
+        "y": 300,
         "wires": []
     },
     {
@@ -3263,7 +3263,7 @@
         "repair": false,
         "outputs": 1,
         "x": 670,
-        "y": 200,
+        "y": 300,
         "wires": [
             [
                 "7a93799b1e771cec"
@@ -3283,7 +3283,7 @@
         "property": "payload.sensor.state_bottom",
         "topi": "topic",
         "x": 830,
-        "y": 200,
+        "y": 300,
         "wires": [
             [
                 "8fc131f44c298a89"
@@ -3302,7 +3302,7 @@
         "finalize": "",
         "libs": [],
         "x": 1000,
-        "y": 200,
+        "y": 300,
         "wires": [
             [
                 "ee02e43e53c4e810"
@@ -3321,10 +3321,11 @@
         "finalize": "",
         "libs": [],
         "x": 500,
-        "y": 280,
+        "y": 300,
         "wires": [
             [
-                "059b5acdbf507e0f"
+                "059b5acdbf507e0f",
+                "fcf108761b6a5325"
             ]
         ]
     },
@@ -3341,7 +3342,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 120,
+        "y": 140,
         "wires": []
     },
     {
