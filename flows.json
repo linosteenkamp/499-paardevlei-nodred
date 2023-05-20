@@ -3144,7 +3144,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var masterBathroomHumidity = flow.get(\"masterBathroomHumidity\") ?? 0\nvar guestBathroomHumidity = flow.get(\"guestBathroomHumidity\") ?? 0\nvar state = \"\"\n\nif (msg.topic === \"zigbee2mqtt/humidity master bathroom\") {\n    masterBathroomHumidity = msg.payload.humidity\n    flow.set(\"masterBathroomHumidity\", msg.payload.humidity)\n}\n\nif (msg.topic === \"zigbee2mqtt/humidity guest bathroom\") {\n    guestBathroomHumidity = msg.payload.humidity\n    flow.set(\"guestBathroomHumidity\", msg.payload.humidity)\n}\n\nvar humidity = Math.max(masterBathroomHumidity, guestBathroomHumidity)\n\nif (humidity >= 80) state = \"ON\"\nif (humidity <= 70) state = \"OFF\"\n\nif (state === \"\")\n{\n    return\n}\nelse\n{\n    return { payload: { state_bottom: state } }\n}\n",
+        "func": "var masterBathroomHumidity = flow.get(\"masterBathroomHumidity\") ?? 0\nvar guestBathroomHumidity = flow.get(\"guestBathroomHumidity\") ?? 0\nvar state = \"\"\n\nif (msg.topic === \"zigbee2mqtt/humidity master bathroom\") {\n    masterBathroomHumidity = msg.payload.humidity\n    flow.set(\"masterBathroomHumidity\", msg.payload.humidity)\n}\n\nif (msg.topic === \"zigbee2mqtt/humidity guest bathroom\") {\n    guestBathroomHumidity = msg.payload.humidity\n    flow.set(\"guestBathroomHumidity\", msg.payload.humidity)\n}\n\nif (msg.topic === \"zigbee2mqtt/switch guest bathroom\")\n{\n    node.send(msg.payload);\n}\n\nvar humidity = Math.max(masterBathroomHumidity, guestBathroomHumidity)\n\nif (humidity >= 80) state = \"ON\"\nif (humidity <= 70) state = \"OFF\"\n\nif (state === \"\")\n{\n    return\n}\nelse\n{\n    return { payload: { state_bottom: state } }\n}\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3174,6 +3174,43 @@
         "x": 690,
         "y": 220,
         "wires": []
+    },
+    {
+        "id": "1809b406f67e4b92",
+        "type": "mqtt in",
+        "z": "1677362e797afd58",
+        "name": "switch guest bathroom",
+        "topic": "zigbee2mqtt/switch guest bathroom",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "12be0d6bf38dae3a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 420,
+        "wires": [
+            [
+                "e941901295c981dc"
+            ]
+        ]
+    },
+    {
+        "id": "e941901295c981dc",
+        "type": "json",
+        "z": "1677362e797afd58",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 330,
+        "y": 420,
+        "wires": [
+            [
+                "8a468154e52114bc"
+            ]
+        ]
     },
     {
         "id": "91ca56617895b720",
