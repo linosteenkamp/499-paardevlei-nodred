@@ -3214,8 +3214,8 @@
         "id": "a6e8e9ee5f257da5",
         "type": "switch",
         "z": "1677362e797afd58",
-        "name": "",
-        "property": "payload.bottom",
+        "name": "test",
+        "property": "payload.state_bottom",
         "propertyType": "msg",
         "rules": [
             {
