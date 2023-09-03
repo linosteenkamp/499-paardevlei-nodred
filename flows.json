@@ -3134,8 +3134,8 @@
         "correl": "",
         "expiry": "",
         "broker": "12be0d6bf38dae3a",
-        "x": 960,
-        "y": 240,
+        "x": 740,
+        "y": 300,
         "wires": []
     },
     {
@@ -3153,155 +3153,7 @@
         "y": 300,
         "wires": [
             [
-                "4f5d8b3380cc71a6",
                 "ee02e43e53c4e810"
-            ]
-        ]
-    },
-    {
-        "id": "1809b406f67e4b92",
-        "type": "mqtt in",
-        "z": "1677362e797afd58",
-        "name": "switch guest bathroom",
-        "topic": "zigbee2mqtt/switch guest bathroom",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "12be0d6bf38dae3a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 120,
-        "y": 420,
-        "wires": [
-            [
-                "e941901295c981dc"
-            ]
-        ]
-    },
-    {
-        "id": "e941901295c981dc",
-        "type": "json",
-        "z": "1677362e797afd58",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 420,
-        "wires": [
-            [
-                "a5e2f3a7a66f14c5"
-            ]
-        ]
-    },
-    {
-        "id": "4f5d8b3380cc71a6",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 750,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "168777222b845c30",
-        "type": "mqtt out",
-        "z": "1677362e797afd58",
-        "name": "switch master bathroom",
-        "topic": "zigbee2mqtt/switch master bedroom/set",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "12be0d6bf38dae3a",
-        "x": 970,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "a5e2f3a7a66f14c5",
-        "type": "function",
-        "z": "1677362e797afd58",
-        "name": "",
-        "func": "var guestBathroomFanStatus = flow.get(\"guestBathroomFanStatus\") ?? \"OFF\"\n\nif (msg.payload.state_bottom != guestBathroomFanStatus){\n    var state = msg.payload.state_bottom\n    flow.set(\"guestBathroomFanStatus\", state)\n    var newMsg = {payload : { state_bottom: state}}\n    return newMsg\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 500,
-        "y": 420,
-        "wires": [
-            [
-                "4f5d8b3380cc71a6"
-            ]
-        ]
-    },
-    {
-        "id": "745b58c15553358e",
-        "type": "mqtt in",
-        "z": "1677362e797afd58",
-        "name": "switch master bedroom",
-        "topic": "zigbee2mqtt/switch master bedroom",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "12be0d6bf38dae3a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 120,
-        "y": 180,
-        "wires": [
-            [
-                "fafb98e2fb3d02a8"
-            ]
-        ]
-    },
-    {
-        "id": "fafb98e2fb3d02a8",
-        "type": "json",
-        "z": "1677362e797afd58",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 330,
-        "y": 180,
-        "wires": [
-            [
-                "130cfb6199a6718e"
-            ]
-        ]
-    },
-    {
-        "id": "130cfb6199a6718e",
-        "type": "function",
-        "z": "1677362e797afd58",
-        "name": "",
-        "func": "var guestBathroomFanStatus = flow.get(\"guestBathroomFanStatus\") ?? \"OFF\"\n\nif (msg.payload.state_bottom != guestBathroomFanStatus){\n    var state = msg.payload.state_bottom\n    flow.set(\"guestBathroomFanStatus\", state)\n    var newMsg = {payload : { state_bottom: state}}\n    return newMsg\n}\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 500,
-        "y": 180,
-        "wires": [
-            [
-                "ee02e43e53c4e810",
-                "4f5d8b3380cc71a6"
             ]
         ]
     },
