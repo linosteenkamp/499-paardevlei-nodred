@@ -3234,7 +3234,7 @@
         "type": "function",
         "z": "1677362e797afd58",
         "name": "",
-        "func": "var guestBathroomFanStatus = flow.get(\"guestBathroomFanStatus\") ?? \"OFF\"\n\nif (msg.payload.state_bottom != guestBathroomFanStatus){\n    flow.set(\"guestBathroomFanStatus\", msg.payload.state_bottom)\n    msg.payload = { state_bottom: msg.payload.state_bottom}\n}\n\n\nreturn msg;",
+        "func": "var guestBathroomFanStatus = flow.get(\"guestBathroomFanStatus\") ?? \"OFF\"\n\nif (msg.payload.state_bottom != guestBathroomFanStatus){\n    var state = msg.payload.state_bottom\n    flow.set(\"guestBathroomFanStatus\", state)\n    return { state_bottom: state}\n}\n\nreturn",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
