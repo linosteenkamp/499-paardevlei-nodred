@@ -3158,22 +3158,6 @@
         ]
     },
     {
-        "id": "2acd5e4cfda27162",
-        "type": "debug",
-        "z": "1677362e797afd58",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 180,
-        "wires": []
-    },
-    {
         "id": "91ca56617895b720",
         "type": "mqtt in",
         "z": "cd6fbb87958d052e",
