@@ -104,6 +104,14 @@
         "env": []
     },
     {
+        "id": "a107f9bac9be1f89",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "12be0d6bf38dae3a",
         "type": "mqtt-broker",
         "name": "",
@@ -3552,11 +3560,57 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 590,
         "y": 240,
+        "wires": []
+    },
+    {
+        "id": "581f37f9fe367f1f",
+        "type": "inject",
+        "z": "a107f9bac9be1f89",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "ebd3606e6ec56951"
+            ]
+        ]
+    },
+    {
+        "id": "ebd3606e6ec56951",
+        "type": "debug",
+        "z": "a107f9bac9be1f89",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 140,
         "wires": []
     }
 ]
