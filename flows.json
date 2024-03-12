@@ -3587,9 +3587,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 210,
+        "payload": "Hello world!",
+        "payloadType": "str",
+        "x": 220,
         "y": 140,
         "wires": [
             [
