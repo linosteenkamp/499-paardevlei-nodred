@@ -3572,7 +3572,7 @@
         "id": "581f37f9fe367f1f",
         "type": "inject",
         "z": "a107f9bac9be1f89",
-        "name": "",
+        "name": "periodic test ",
         "props": [
             {
                 "p": "payload"
