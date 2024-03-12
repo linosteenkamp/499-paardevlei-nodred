@@ -3582,7 +3582,7 @@
                 "vt": "str"
             }
         ],
-        "repeat": "",
+        "repeat": "5",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
