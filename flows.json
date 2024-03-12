@@ -3527,7 +3527,7 @@
         "type": "mqtt in",
         "z": "7272e7fad2724554",
         "name": "test",
-        "topic": "test",
+        "topic": "paho/test/topic",
         "qos": "2",
         "datatype": "auto",
         "broker": "12be0d6bf38dae3a",
