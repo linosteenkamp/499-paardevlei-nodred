@@ -104,14 +104,6 @@
         "env": []
     },
     {
-        "id": "a107f9bac9be1f89",
-        "type": "tab",
-        "label": "Flow 2",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "12be0d6bf38dae3a",
         "type": "mqtt-broker",
         "name": "",
@@ -3535,7 +3527,7 @@
         "type": "mqtt in",
         "z": "7272e7fad2724554",
         "name": "test",
-        "topic": "zigbee2mqtt/switch guest bedroom/set",
+        "topic": "oneil/led",
         "qos": "2",
         "datatype": "auto",
         "broker": "12be0d6bf38dae3a",
@@ -3560,57 +3552,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "false",
         "statusVal": "",
         "statusType": "auto",
         "x": 590,
         "y": 240,
-        "wires": []
-    },
-    {
-        "id": "581f37f9fe367f1f",
-        "type": "inject",
-        "z": "a107f9bac9be1f89",
-        "name": "periodic test ",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Hello world!",
-        "payloadType": "str",
-        "x": 220,
-        "y": 140,
-        "wires": [
-            [
-                "ebd3606e6ec56951"
-            ]
-        ]
-    },
-    {
-        "id": "ebd3606e6ec56951",
-        "type": "debug",
-        "z": "a107f9bac9be1f89",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 560,
-        "y": 140,
         "wires": []
     }
 ]
