@@ -879,8 +879,7 @@
                 "p": "disabled",
                 "pt": "flow",
                 "to": "payload",
-                "tot": "msg",
-                "dc": true
+                "tot": "msg"
             }
         ],
         "action": "",
