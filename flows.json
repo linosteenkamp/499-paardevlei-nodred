@@ -922,8 +922,34 @@
         "y": 680,
         "wires": [
             [
-                "66c118206a499a82"
+                "66c118206a499a82",
+                "bb5ada2aa18077f6"
             ]
+        ]
+    },
+    {
+        "id": "bb5ada2aa18077f6",
+        "type": "change",
+        "z": "d962963bfcd65845",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "disabled",
+                "pt": "global",
+                "to": "payload.disabled",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 710,
+        "y": 740,
+        "wires": [
+            []
         ]
     },
     {
