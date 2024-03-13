@@ -878,7 +878,7 @@
                 "t": "set",
                 "p": "disabled",
                 "pt": "flow",
-                "to": "payload",
+                "to": "payload.disabled",
                 "tot": "msg"
             }
         ],
