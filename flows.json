@@ -879,7 +879,8 @@
                 "p": "disabled",
                 "pt": "flow",
                 "to": "payload.disabled",
-                "tot": "jsonata"
+                "tot": "msg",
+                "dc": true
             }
         ],
         "action": "",
