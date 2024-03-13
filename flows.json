@@ -568,7 +568,7 @@
         "type": "function",
         "z": "d962963bfcd65845",
         "name": "",
-        "func": "var led = flow.get(\"led\");\nvar disabled = flow.get(\"disabled\")\n\nconsole.error(disabled)\n\nif (led === undefined) {\n    led = {\n        \"state\": \"OFF\"\n    }\n}\n\nif (!disabled && msg.payload.illuminance <=35 && msg.payload.occupancy === true)\n{\n    msg = { payload: { \"state\": \"ON\" } };\n    return msg;\n}\nif (!disabled && led.state == \"ON\" && msg.payload.occupancy === true)\n{\n    msg = { payload: { \"state\": \"ON\" } };\n    return msg;\n}\n\n// return msg;",
+        "func": "var led = flow.get(\"led\");\nvar enabled = global.get(\"enabled\")\n\nif (led === undefined) {\n    led = {\n        \"state\": \"OFF\"\n    }\n}\n\nif (enabled && msg.payload.illuminance <=35 && msg.payload.occupancy === true)\n{\n    msg = { payload: { \"state\": \"ON\" } };\n    return msg;\n}\nif (enabled && led.state == \"ON\" && msg.payload.occupancy === true)\n{\n    msg = { payload: { \"state\": \"ON\" } };\n    return msg;\n}\n\n// return msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -869,31 +869,6 @@
         ]
     },
     {
-        "id": "66c118206a499a82",
-        "type": "change",
-        "z": "d962963bfcd65845",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "disabled",
-                "pt": "flow",
-                "to": "payload.disabled",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 710,
-        "y": 680,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "6f3483832179cc8b",
         "type": "debug",
         "z": "d962963bfcd65845",
@@ -922,7 +897,6 @@
         "y": 680,
         "wires": [
             [
-                "66c118206a499a82",
                 "bb5ada2aa18077f6"
             ]
         ]
@@ -947,7 +921,7 @@
         "to": "",
         "reg": false,
         "x": 710,
-        "y": 740,
+        "y": 680,
         "wires": [
             []
         ]
