@@ -864,7 +864,7 @@
         "y": 680,
         "wires": [
             [
-                "66c118206a499a82"
+                "5c01115dddf36451"
             ]
         ]
     },
@@ -878,7 +878,7 @@
                 "t": "set",
                 "p": "disabled",
                 "pt": "flow",
-                "to": "payload",
+                "to": "payload.disabled",
                 "tot": "msg"
             }
         ],
@@ -887,7 +887,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 390,
+        "x": 710,
         "y": 680,
         "wires": [
             []
@@ -902,12 +902,37 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 910,
         "y": 200,
         "wires": []
+    },
+    {
+        "id": "5c01115dddf36451",
+        "type": "join",
+        "z": "d962963bfcd65845",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": "false",
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "x": 470,
+        "y": 680,
+        "wires": [
+            [
+                "66c118206a499a82"
+            ]
+        ]
     },
     {
         "id": "504c84df6a00700d",
