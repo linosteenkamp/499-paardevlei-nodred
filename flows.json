@@ -935,9 +935,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "disabled",
+                "p": "enabled",
                 "pt": "global",
-                "to": "payload.disabled",
+                "to": "payload.enabled",
                 "tot": "msg"
             }
         ],
