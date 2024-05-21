@@ -96,14 +96,6 @@
         "env": []
     },
     {
-        "id": "7272e7fad2724554",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "12be0d6bf38dae3a",
         "type": "mqtt-broker",
         "name": "",
@@ -3617,43 +3609,6 @@
         "statusType": "auto",
         "x": 980,
         "y": 220,
-        "wires": []
-    },
-    {
-        "id": "884fb6f61fd3895e",
-        "type": "mqtt in",
-        "z": "7272e7fad2724554",
-        "name": "test",
-        "topic": "oneil/led",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "12be0d6bf38dae3a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 360,
-        "y": 240,
-        "wires": [
-            [
-                "5ddd0735b101ec72"
-            ]
-        ]
-    },
-    {
-        "id": "5ddd0735b101ec72",
-        "type": "debug",
-        "z": "7272e7fad2724554",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 590,
-        "y": 240,
         "wires": []
     }
 ]
