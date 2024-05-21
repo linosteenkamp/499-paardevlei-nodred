@@ -91,7 +91,7 @@
         "id": "12be0d6bf38dae3a",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "localhost",
+        "broker": "192.168.1.6",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
@@ -99,6 +99,7 @@
         "protocolVersion": "4",
         "keepalive": "60",
         "cleansession": true,
+        "autoUnsubscribe": true,
         "birthTopic": "",
         "birthQos": "0",
         "birthPayload": "",
@@ -111,6 +112,7 @@
         "willQos": "0",
         "willPayload": "",
         "willMsg": {},
+        "userProps": "",
         "sessionExpiry": ""
     },
     {
