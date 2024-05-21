@@ -3291,19 +3291,17 @@
         "wires": []
     },
     {
-        "id": "968402dd463669a5",
-        "type": "zigbee2mqtt-in",
+        "id": "dbe490a85555d4b4",
+        "type": "zigbee2mqtt-get",
         "z": "33b89297c0e3a43d",
         "name": "",
         "server": "9bfb9e4ed0209d0d",
-        "friendly_name": "",
-        "device_id": [],
-        "state": null,
-        "outputAtStartup": true,
-        "filterChanges": false,
+        "friendly_name": "motion study (RTCGQ11LM)",
+        "device_id": "0x00158d00063351dc",
+        "state": "0",
         "enableMultiple": false,
-        "x": 220,
-        "y": 340,
+        "x": 300,
+        "y": 280,
         "wires": [
             [
                 "19fb89f616c0573d"
