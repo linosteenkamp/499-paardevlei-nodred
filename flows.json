@@ -3334,10 +3334,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -3345,9 +3341,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 120,
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 110,
         "y": 600,
         "wires": [
             [
