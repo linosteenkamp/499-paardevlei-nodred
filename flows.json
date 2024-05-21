@@ -3289,22 +3289,6 @@
         "wires": []
     },
     {
-        "id": "c493f0a87a6aa6fb",
-        "type": "json",
-        "z": "33b89297c0e3a43d",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 550,
-        "y": 280,
-        "wires": [
-            [
-                "19fb89f616c0573d"
-            ]
-        ]
-    },
-    {
         "id": "f74343bbdedb57d1",
         "type": "zigbee2mqtt-get",
         "z": "33b89297c0e3a43d",
@@ -3318,7 +3302,7 @@
         "y": 280,
         "wires": [
             [
-                "c493f0a87a6aa6fb"
+                "19fb89f616c0573d"
             ]
         ]
     }
