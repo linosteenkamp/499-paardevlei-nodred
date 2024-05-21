@@ -3295,7 +3295,9 @@
         "name": "",
         "server": "9bfb9e4ed0209d0d",
         "friendly_name": "1 selected",
-        "device_id": "0x00158d00063351dc",
+        "device_id": [
+            "0x54ef4410001590a9"
+        ],
         "state": "occupancy",
         "enableMultiple": true,
         "x": 250,
