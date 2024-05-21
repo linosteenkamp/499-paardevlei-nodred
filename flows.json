@@ -3294,11 +3294,11 @@
         "z": "33b89297c0e3a43d",
         "name": "",
         "server": "9bfb9e4ed0209d0d",
-        "friendly_name": "motion study (RTCGQ11LM)",
+        "friendly_name": "1 selected",
         "device_id": "0x00158d00063351dc",
-        "state": "voltage",
-        "enableMultiple": false,
-        "x": 300,
+        "state": "occupancy",
+        "enableMultiple": true,
+        "x": 250,
         "y": 280,
         "wires": [
             [
