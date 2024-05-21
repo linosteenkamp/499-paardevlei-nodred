@@ -3356,5 +3356,25 @@
                 "a6df8e8cd7b71432"
             ]
         ]
+    },
+    {
+        "id": "a5e279fab53e7719",
+        "type": "zigbee2mqtt-in",
+        "z": "33b89297c0e3a43d",
+        "name": "",
+        "server": "9bfb9e4ed0209d0d",
+        "friendly_name": "motion study (RTCGQ11LM)",
+        "device_id": "0x00158d00063351dc",
+        "state": "0",
+        "outputAtStartup": false,
+        "filterChanges": true,
+        "enableMultiple": false,
+        "x": 420,
+        "y": 420,
+        "wires": [
+            [
+                "2cbcaa1228f20657"
+            ]
+        ]
     }
 ]
