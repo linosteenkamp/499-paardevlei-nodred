@@ -3299,7 +3299,7 @@
         "friendly_name": "button study (WXKG11LM)",
         "device_id": "0x00158d00052b9399",
         "state": "0",
-        "outputAtStartup": true,
+        "outputAtStartup": false,
         "filterChanges": false,
         "enableMultiple": false,
         "x": 290,
