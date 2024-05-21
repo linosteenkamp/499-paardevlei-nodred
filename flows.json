@@ -3310,5 +3310,25 @@
                 "2cbcaa1228f20657"
             ]
         ]
+    },
+    {
+        "id": "822f80341d66f6a3",
+        "type": "zigbee2mqtt-in",
+        "z": "33b89297c0e3a43d",
+        "name": "",
+        "server": "9bfb9e4ed0209d0d",
+        "friendly_name": "button study (WXKG11LM)",
+        "device_id": "0x00158d00052b9399",
+        "state": "0",
+        "outputAtStartup": true,
+        "filterChanges": false,
+        "enableMultiple": false,
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "2cbcaa1228f20657"
+            ]
+        ]
     }
 ]
