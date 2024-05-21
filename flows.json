@@ -3284,29 +3284,9 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
+        "x": 740,
         "y": 280,
         "wires": []
-    },
-    {
-        "id": "dbe490a85555d4b4",
-        "type": "zigbee2mqtt-get",
-        "z": "33b89297c0e3a43d",
-        "name": "",
-        "server": "9bfb9e4ed0209d0d",
-        "friendly_name": "1 selected",
-        "device_id": [
-            "0x00158d00045cdd4e"
-        ],
-        "state": "occupancy",
-        "enableMultiple": true,
-        "x": 250,
-        "y": 280,
-        "wires": [
-            [
-                "c493f0a87a6aa6fb"
-            ]
-        ]
     },
     {
         "id": "c493f0a87a6aa6fb",
@@ -3316,11 +3296,29 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 470,
+        "x": 550,
         "y": 280,
         "wires": [
             [
                 "19fb89f616c0573d"
+            ]
+        ]
+    },
+    {
+        "id": "f74343bbdedb57d1",
+        "type": "zigbee2mqtt-get",
+        "z": "33b89297c0e3a43d",
+        "name": "",
+        "server": "9bfb9e4ed0209d0d",
+        "friendly_name": "motion study (RTCGQ11LM)",
+        "device_id": "0x00158d00063351dc",
+        "state": "0",
+        "enableMultiple": false,
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "c493f0a87a6aa6fb"
             ]
         ]
     }
