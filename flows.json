@@ -80,6 +80,14 @@
         "env": []
     },
     {
+        "id": "33b89297c0e3a43d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "12be0d6bf38dae3a",
         "type": "mqtt-broker",
         "name": "",
@@ -111,6 +119,19 @@
         "name": "Cape Town",
         "latitude": "-34.0486",
         "longitude": "18.4811"
+    },
+    {
+        "id": "9bfb9e4ed0209d0d",
+        "type": "zigbee2mqtt-server",
+        "name": "localhost",
+        "host": "localhost",
+        "mqtt_port": "1883",
+        "mqtt_username": "mqtt",
+        "mqtt_password": "2tVEquV2aaUm",
+        "mqtt_qos": "0",
+        "tls": "",
+        "usetls": false,
+        "base_topic": "zigbee2mqtt"
     },
     {
         "id": "2a00ae8c91bbaaa5",
@@ -3237,5 +3258,36 @@
                 "ee02e43e53c4e810"
             ]
         ]
+    },
+    {
+        "id": "9d2451f7f4c20679",
+        "type": "zigbee2mqtt-bridge",
+        "z": "33b89297c0e3a43d",
+        "name": "",
+        "server": "9bfb9e4ed0209d0d",
+        "topic": null,
+        "x": 280,
+        "y": 160,
+        "wires": [
+            [
+                "19fb89f616c0573d"
+            ]
+        ]
+    },
+    {
+        "id": "19fb89f616c0573d",
+        "type": "debug",
+        "z": "33b89297c0e3a43d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 160,
+        "wires": []
     }
 ]
