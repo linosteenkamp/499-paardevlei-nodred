@@ -3296,7 +3296,7 @@
         "server": "9bfb9e4ed0209d0d",
         "friendly_name": "motion study (RTCGQ11LM)",
         "device_id": "0x00158d00063351dc",
-        "state": "0",
+        "state": "voltage",
         "enableMultiple": false,
         "x": 300,
         "y": 280,
