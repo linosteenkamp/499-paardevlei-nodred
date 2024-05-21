@@ -3263,30 +3263,14 @@
         "id": "9d2451f7f4c20679",
         "type": "zigbee2mqtt-bridge",
         "z": "33b89297c0e3a43d",
-        "name": "",
+        "name": "499 Paardevlei",
         "server": "9bfb9e4ed0209d0d",
         "topic": null,
-        "x": 280,
+        "x": 260,
         "y": 160,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "19fb89f616c0573d",
-        "type": "debug",
-        "z": "33b89297c0e3a43d",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 740,
-        "y": 280,
-        "wires": []
     },
     {
         "id": "f74343bbdedb57d1",
@@ -3301,9 +3285,7 @@
         "x": 300,
         "y": 280,
         "wires": [
-            [
-                "19fb89f616c0573d"
-            ]
+            []
         ]
     }
 ]
