@@ -3291,25 +3291,6 @@
         "wires": []
     },
     {
-        "id": "ef6ac38d099a055b",
-        "type": "mqtt in",
-        "z": "33b89297c0e3a43d",
-        "name": "",
-        "topic": "zigbee2mqtt/button study",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "12be0d6bf38dae3a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 290,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "822f80341d66f6a3",
         "type": "zigbee2mqtt-in",
         "z": "33b89297c0e3a43d",
