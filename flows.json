@@ -3268,7 +3268,7 @@
         "name": "499 Paardevlei",
         "server": "9bfb9e4ed0209d0d",
         "topic": null,
-        "x": 260,
+        "x": 380,
         "y": 160,
         "wires": [
             []
@@ -3286,7 +3286,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 680,
+        "x": 800,
         "y": 480,
         "wires": []
     },
@@ -3302,7 +3302,7 @@
         "outputAtStartup": false,
         "filterChanges": false,
         "enableMultiple": false,
-        "x": 290,
+        "x": 410,
         "y": 320,
         "wires": [
             [
@@ -3320,11 +3320,40 @@
         "device_id": "0x00158d00063351dc",
         "state": "0",
         "enableMultiple": false,
-        "x": 280,
+        "x": 400,
         "y": 600,
         "wires": [
             [
                 "2cbcaa1228f20657"
+            ]
+        ]
+    },
+    {
+        "id": "92dffcc98f0d88ba",
+        "type": "inject",
+        "z": "33b89297c0e3a43d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 80,
+        "y": 600,
+        "wires": [
+            [
+                "a6df8e8cd7b71432"
             ]
         ]
     }
