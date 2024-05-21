@@ -3285,7 +3285,41 @@
         "x": 300,
         "y": 280,
         "wires": [
-            []
+            [
+                "17fbc105d8744772"
+            ]
+        ]
+    },
+    {
+        "id": "2cbcaa1228f20657",
+        "type": "debug",
+        "z": "33b89297c0e3a43d",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "17fbc105d8744772",
+        "type": "json",
+        "z": "33b89297c0e3a43d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "2cbcaa1228f20657"
+            ]
         ]
     }
 ]
