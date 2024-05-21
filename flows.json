@@ -3296,13 +3296,13 @@
         "z": "33b89297c0e3a43d",
         "name": "",
         "server": "9bfb9e4ed0209d0d",
-        "friendly_name": "button study (WXKG11LM)",
+        "friendly_name": "1 selected",
         "device_id": "0x00158d00052b9399",
         "state": "0",
         "outputAtStartup": false,
         "filterChanges": false,
-        "enableMultiple": false,
-        "x": 290,
+        "enableMultiple": true,
+        "x": 240,
         "y": 320,
         "wires": [
             [
