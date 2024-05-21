@@ -3269,27 +3269,7 @@
         "x": 260,
         "y": 160,
         "wires": [
-            [
-                "2cbcaa1228f20657"
-            ]
-        ]
-    },
-    {
-        "id": "f74343bbdedb57d1",
-        "type": "zigbee2mqtt-get",
-        "z": "33b89297c0e3a43d",
-        "name": "",
-        "server": "9bfb9e4ed0209d0d",
-        "friendly_name": "button study (WXKG11LM)",
-        "device_id": "0x00158d00052b9399",
-        "state": "0",
-        "enableMultiple": false,
-        "x": 300,
-        "y": 280,
-        "wires": [
-            [
-                "17fbc105d8744772"
-            ]
+            []
         ]
     },
     {
@@ -3304,20 +3284,25 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 820,
-        "y": 280,
+        "x": 680,
+        "y": 480,
         "wires": []
     },
     {
-        "id": "17fbc105d8744772",
-        "type": "json",
+        "id": "ef6ac38d099a055b",
+        "type": "mqtt in",
         "z": "33b89297c0e3a43d",
         "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 590,
-        "y": 280,
+        "topic": "",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "12be0d6bf38dae3a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 1,
+        "x": 230,
+        "y": 480,
         "wires": [
             [
                 "2cbcaa1228f20657"
