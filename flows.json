@@ -1755,7 +1755,8 @@
         "wires": [
             [
                 "1353c73125217004",
-                "9870662ad50960ea"
+                "9870662ad50960ea",
+                "ddb6a5373d1af710"
             ]
         ]
     },
@@ -1802,9 +1803,7 @@
         "x": 680,
         "y": 340,
         "wires": [
-            [
-                "db31215f6f4621f2"
-            ]
+            []
         ]
     },
     {
@@ -1893,7 +1892,6 @@
         "y": 180,
         "wires": [
             [
-                "8dd7ef314ad6726b",
                 "efd5807c05fb5d3f"
             ]
         ]
@@ -1967,6 +1965,7 @@
         "name": "",
         "func": "var macBookStatus = flow.get(\"macBookStatus\");\nvar lampStatus = flow.get(\"lampStatus\");\n\nif (macBookStatus === undefined) {\n    macBookStatus = {\n        \"status\": \"sleep\"\n    }\n    \n    flow.set(\"macBookStatus\", macBookStatus)\n}\n\nif (\n    msg.payload.occupancy === true &&\n    msg.payload.illuminance <= 20\n) {\n\n    msg = {\n        payload: {\n            \"state\": \"ON\"\n        }\n    };\n    return [ msg, null ];\n} else if (\n    msg.payload.occupancy === false &&\n    macBookStatus.status === \"sleep\" ||\n    msg.payload.illuminance > 20\n) {\n    msg = {\n        payload: {\n            \"state\": \"OFF\"\n        }\n    };\n    return [ msg, msg ];\n}",
         "outputs": 2,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -1975,7 +1974,6 @@
         "y": 420,
         "wires": [
             [
-                "0ba79c5e9be953f6",
                 "7bda54f248cbf287"
             ],
             [
@@ -2125,7 +2123,6 @@
         "y": 560,
         "wires": [
             [
-                "78b3826bd34bad6d",
                 "7bda54f248cbf287",
                 "9d9ea1698594a507"
             ]
@@ -2156,6 +2153,22 @@
                 "9d9ea1698594a507"
             ]
         ]
+    },
+    {
+        "id": "ddb6a5373d1af710",
+        "type": "debug",
+        "z": "9d17aed6252a7507",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 260,
+        "wires": []
     },
     {
         "id": "e32689e16add03ae",
