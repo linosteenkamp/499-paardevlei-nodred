@@ -1963,7 +1963,7 @@
         "type": "function",
         "z": "9d17aed6252a7507",
         "name": "",
-        "func": "var macBookStatus = flow.get(\"macBookStatus\");\nvar lampStatus = flow.get(\"lampStatus\");\n\nif (macBookStatus === undefined) {\n    macBookStatus = {\n        \"status\": \"sleep\"\n    }\n    \n    flow.set(\"macBookStatus\", macBookStatus)\n}\n\nif (\n    msg.payload.occupancy === true &&\n    msg.payload.illuminance <= 20\n) {\n\n    msg = {\n        payload: {\n            \"state\": \"ON\"\n        }\n    };\n    return [ msg, null ];\n} else if (\n    msg.payload.occupancy === false &&\n    macBookStatus.status === \"sleep\" ||\n    msg.payload.illuminance > 20\n) {\n    msg = {\n        payload: {\n            \"state\": \"OFF\"\n        }\n    };\n    return [ msg, msg ];\n}",
+        "func": "var macBookStatus = flow.get(\"macBookStatus\");\nvar lampStatus = flow.get(\"lampStatus\");\n\nif (macBookStatus === undefined) {\n    macBookStatus = {\n        \"status\": \"sleep\"\n    }\n    \n    flow.set(\"macBookStatus\", macBookStatus)\n}\n\nif (\n    msg.payload.occupancy === true &&\n    msg.payload?.illuminance <= 20\n) {\n\n    msg = {\n        payload: {\n            \"state\": \"ON\"\n        }\n    };\n    return [ msg, null ];\n} else if (\n    msg.payload.occupancy === false &&\n    macBookStatus.status === \"sleep\" ||\n    msg.payload.illuminance > 20\n) {\n    msg = {\n        payload: {\n            \"state\": \"OFF\"\n        }\n    };\n    return [ msg, msg ];\n}",
         "outputs": 2,
         "timeout": "",
         "noerr": 0,
