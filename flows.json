@@ -569,6 +569,7 @@
         "name": "",
         "func": "var led = flow.get(\"led\");\nvar enabled = global.get(\"enabled\")\n\nif (led === undefined) {\n    led = {\n        \"state\": \"OFF\"\n    }\n}\n\nif (enabled && msg.payload.illuminance <=35 && msg.payload.occupancy === true)\n{\n    msg = { payload: { \"state\": \"ON\" } };\n    return msg;\n}\nif (enabled && led.state == \"ON\" && msg.payload.occupancy === true)\n{\n    msg = { payload: { \"state\": \"ON\" } };\n    return msg;\n}\n\n// return msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
