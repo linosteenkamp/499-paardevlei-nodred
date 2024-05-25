@@ -126,7 +126,7 @@
         "id": "9bfb9e4ed0209d0d",
         "type": "zigbee2mqtt-server",
         "name": "homebridge",
-        "host": "192.168.1.6",
+        "host": "192.168.1.4",
         "mqtt_port": "1883",
         "mqtt_username": "mqtt",
         "mqtt_password": "2tVEquV2aaUm",
