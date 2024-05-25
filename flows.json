@@ -524,8 +524,7 @@
         "y": 280,
         "wires": [
             [
-                "c3cd79fcd986f590",
-                "6f3483832179cc8b"
+                "c3cd79fcd986f590"
             ]
         ]
     },
@@ -541,7 +540,8 @@
         "y": 280,
         "wires": [
             [
-                "68aea32965b364c3"
+                "68aea32965b364c3",
+                "6f3483832179cc8b"
             ]
         ]
     },
@@ -881,7 +881,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 490,
+        "x": 690,
         "y": 200,
         "wires": []
     },
@@ -922,6 +922,24 @@
         "reg": false,
         "x": 710,
         "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8901c080d5448bf",
+        "type": "zigbee2mqtt-in",
+        "z": "d962963bfcd65845",
+        "name": "",
+        "server": "9bfb9e4ed0209d0d",
+        "friendly_name": "motion kitchen (RTCGQ11LM)",
+        "device_id": "0x00158d00053f9cd6",
+        "state": "0",
+        "outputAtStartup": false,
+        "filterChanges": true,
+        "enableMultiple": false,
+        "x": 200,
+        "y": 800,
         "wires": [
             []
         ]
