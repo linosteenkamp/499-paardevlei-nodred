@@ -2165,8 +2165,7 @@
         "y": 200,
         "wires": [
             [
-                "81bdd55494825b31",
-                "ee2415fa5a51cec7"
+                "81bdd55494825b31"
             ]
         ]
     },
@@ -2248,22 +2247,6 @@
         ]
     },
     {
-        "id": "ee2415fa5a51cec7",
-        "type": "debug",
-        "z": "fe07807563218a3c",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 320,
-        "wires": []
-    },
-    {
         "id": "fa0c7722d901e775",
         "type": "mqtt in",
         "z": "fe07807563218a3c",
@@ -2296,8 +2279,7 @@
         "y": 520,
         "wires": [
             [
-                "e6fd4e444cf52214",
-                "462de2629df9a92e"
+                "e6fd4e444cf52214"
             ]
         ]
     },
@@ -2377,22 +2359,6 @@
             [],
             []
         ]
-    },
-    {
-        "id": "462de2629df9a92e",
-        "type": "debug",
-        "z": "fe07807563218a3c",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "08c5fd57f0bb3498",
