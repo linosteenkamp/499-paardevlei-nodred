@@ -977,7 +977,7 @@
         "type": "function",
         "z": "d962963bfcd65845",
         "name": "function 1",
-        "func": "\nreturn msg;",
+        "func": "\nreturn msg.payload.enabled;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
