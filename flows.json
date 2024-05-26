@@ -982,7 +982,7 @@
             {
                 "t": "set",
                 "p": "enabled",
-                "pt": "msg",
+                "pt": "global",
                 "to": "payload.enabled",
                 "tot": "msg"
             }
