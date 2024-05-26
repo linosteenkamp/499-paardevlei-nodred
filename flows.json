@@ -906,7 +906,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "enabled",
+                "p": "do-not-disturb",
                 "pt": "global",
                 "to": "payload.enabled",
                 "tot": "msg"
@@ -917,7 +917,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 930,
+        "x": 950,
         "y": 600,
         "wires": [
             []
@@ -955,7 +955,8 @@
         "wires": [
             [
                 "497382899aa4e81e",
-                "71983ac977559f7b"
+                "bb5ada2aa18077f6",
+                "6f3483832179cc8b"
             ]
         ]
     },
@@ -969,27 +970,6 @@
         "x": 470,
         "y": 520,
         "wires": []
-    },
-    {
-        "id": "71983ac977559f7b",
-        "type": "function",
-        "z": "d962963bfcd65845",
-        "name": "tranlate payload",
-        "func": "return { payload: { \"enabled\": !msg.payload.enabled } };\n",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 700,
-        "y": 600,
-        "wires": [
-            [
-                "bb5ada2aa18077f6",
-                "6f3483832179cc8b"
-            ]
-        ]
     },
     {
         "id": "504c84df6a00700d",
