@@ -974,7 +974,7 @@
         "id": "71983ac977559f7b",
         "type": "function",
         "z": "d962963bfcd65845",
-        "name": "function 1",
+        "name": "tranlate payload",
         "func": "return { payload: { \"enabled\": !msg.payload.enabled } };\n",
         "outputs": 1,
         "timeout": 0,
@@ -982,7 +982,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 680,
+        "x": 700,
         "y": 600,
         "wires": [
             [
