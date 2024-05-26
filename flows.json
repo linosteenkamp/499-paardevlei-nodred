@@ -847,23 +847,6 @@
         "wires": []
     },
     {
-        "id": "6f3483832179cc8b",
-        "type": "debug",
-        "z": "d962963bfcd65845",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 640,
-        "wires": []
-    },
-    {
         "id": "bb5ada2aa18077f6",
         "type": "change",
         "z": "d962963bfcd65845",
@@ -902,8 +885,7 @@
         "wires": [
             [
                 "497382899aa4e81e",
-                "bb5ada2aa18077f6",
-                "6f3483832179cc8b"
+                "bb5ada2aa18077f6"
             ]
         ]
     },
@@ -914,71 +896,9 @@
         "name": "OK",
         "statusCode": "200",
         "headers": {},
-        "x": 470,
-        "y": 520,
+        "x": 450,
+        "y": 680,
         "wires": []
-    },
-    {
-        "id": "ca74c716b139c54f",
-        "type": "change",
-        "z": "d962963bfcd65845",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "enabled",
-                "pt": "global",
-                "to": "payload.enabled",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 930,
-        "y": 680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6cfe850a4be871ea",
-        "type": "json",
-        "z": "d962963bfcd65845",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 470,
-        "y": 680,
-        "wires": [
-            [
-                "ca74c716b139c54f"
-            ]
-        ]
-    },
-    {
-        "id": "59c3f1e29748c5f9",
-        "type": "mqtt in",
-        "z": "d962963bfcd65845",
-        "name": "",
-        "topic": "oneil/led",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "12be0d6bf38dae3a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 140,
-        "y": 680,
-        "wires": [
-            [
-                "6cfe850a4be871ea"
-            ]
-        ]
     },
     {
         "id": "504c84df6a00700d",
