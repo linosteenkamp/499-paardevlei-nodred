@@ -880,8 +880,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 600,
+        "x": 690,
+        "y": 540,
         "wires": []
     },
     {
@@ -895,9 +895,7 @@
         "x": 470,
         "y": 680,
         "wires": [
-            [
-                "bb5ada2aa18077f6"
-            ]
+            []
         ]
     },
     {
@@ -919,8 +917,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 710,
-        "y": 680,
+        "x": 930,
+        "y": 600,
         "wires": [
             []
         ]
@@ -957,7 +955,8 @@
         "wires": [
             [
                 "497382899aa4e81e",
-                "71983ac977559f7b"
+                "71983ac977559f7b",
+                "6f3483832179cc8b"
             ]
         ]
     },
@@ -977,7 +976,7 @@
         "type": "function",
         "z": "d962963bfcd65845",
         "name": "function 1",
-        "func": "\nreturn msg.payload.enabled;",
+        "func": "\nreturn !msg.payload.enabled;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -988,7 +987,7 @@
         "y": 600,
         "wires": [
             [
-                "6f3483832179cc8b"
+                "bb5ada2aa18077f6"
             ]
         ]
     },
