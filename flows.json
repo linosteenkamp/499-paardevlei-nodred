@@ -847,27 +847,6 @@
         "wires": []
     },
     {
-        "id": "59c3f1e29748c5f9",
-        "type": "mqtt in",
-        "z": "d962963bfcd65845",
-        "name": "",
-        "topic": "oneil/led",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "12be0d6bf38dae3a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 140,
-        "y": 680,
-        "wires": [
-            [
-                "6cfe850a4be871ea"
-            ]
-        ]
-    },
-    {
         "id": "6f3483832179cc8b",
         "type": "debug",
         "z": "d962963bfcd65845",
@@ -883,23 +862,6 @@
         "x": 670,
         "y": 640,
         "wires": []
-    },
-    {
-        "id": "6cfe850a4be871ea",
-        "type": "json",
-        "z": "d962963bfcd65845",
-        "name": "",
-        "property": "payload",
-        "action": "obj",
-        "pretty": false,
-        "x": 470,
-        "y": 680,
-        "wires": [
-            [
-                "ca74c716b139c54f",
-                "6f3483832179cc8b"
-            ]
-        ]
     },
     {
         "id": "bb5ada2aa18077f6",
@@ -922,24 +884,6 @@
         "reg": false,
         "x": 950,
         "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c8901c080d5448bf",
-        "type": "zigbee2mqtt-in",
-        "z": "d962963bfcd65845",
-        "name": "",
-        "server": "9bfb9e4ed0209d0d",
-        "friendly_name": "motion kitchen (RTCGQ11LM)",
-        "device_id": "0x00158d00053f9cd6",
-        "state": "0",
-        "outputAtStartup": false,
-        "filterChanges": true,
-        "enableMultiple": false,
-        "x": 200,
-        "y": 800,
         "wires": [
             []
         ]
@@ -996,6 +940,44 @@
         "y": 680,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "6cfe850a4be871ea",
+        "type": "json",
+        "z": "d962963bfcd65845",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": false,
+        "x": 470,
+        "y": 680,
+        "wires": [
+            [
+                "ca74c716b139c54f",
+                "6f3483832179cc8b"
+            ]
+        ]
+    },
+    {
+        "id": "59c3f1e29748c5f9",
+        "type": "mqtt in",
+        "z": "d962963bfcd65845",
+        "name": "",
+        "topic": "oneil/led",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "12be0d6bf38dae3a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 680,
+        "wires": [
+            [
+                "6cfe850a4be871ea"
+            ]
         ]
     },
     {
