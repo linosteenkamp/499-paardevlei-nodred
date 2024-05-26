@@ -880,8 +880,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
-        "y": 660,
+        "x": 690,
+        "y": 520,
         "wires": []
     },
     {
@@ -970,6 +970,31 @@
         "x": 470,
         "y": 520,
         "wires": []
+    },
+    {
+        "id": "ca74c716b139c54f",
+        "type": "change",
+        "z": "d962963bfcd65845",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "payload.enabled",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 680,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "504c84df6a00700d",
