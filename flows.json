@@ -2259,26 +2259,9 @@
         "y": 160,
         "wires": [
             [
-                "0127caadc3e95bc4",
-                "55d3d23066645cc3"
+                "0127caadc3e95bc4"
             ]
         ]
-    },
-    {
-        "id": "55d3d23066645cc3",
-        "type": "debug",
-        "z": "6b274b3d1a72e5fa",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 890,
-        "y": 60,
-        "wires": []
     },
     {
         "id": "d53255bf26ca5f17",
