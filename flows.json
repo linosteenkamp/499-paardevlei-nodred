@@ -3012,22 +3012,6 @@
         ]
     },
     {
-        "id": "2cbcaa1228f20657",
-        "type": "debug",
-        "z": "33b89297c0e3a43d",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 600,
-        "wires": []
-    },
-    {
         "id": "822f80341d66f6a3",
         "type": "zigbee2mqtt-in",
         "z": "33b89297c0e3a43d",
