@@ -956,23 +956,7 @@
         "y": 600,
         "wires": [
             [
-                "75bb1297327af4e4",
-                "497382899aa4e81e"
-            ]
-        ]
-    },
-    {
-        "id": "75bb1297327af4e4",
-        "type": "json",
-        "z": "d962963bfcd65845",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 470,
-        "y": 600,
-        "wires": [
-            [
+                "497382899aa4e81e",
                 "6f3483832179cc8b"
             ]
         ]
