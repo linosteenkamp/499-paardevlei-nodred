@@ -880,8 +880,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 690,
-        "y": 540,
+        "x": 910,
+        "y": 660,
         "wires": []
     },
     {
@@ -955,8 +955,7 @@
         "wires": [
             [
                 "497382899aa4e81e",
-                "71983ac977559f7b",
-                "6f3483832179cc8b"
+                "71983ac977559f7b"
             ]
         ]
     },
@@ -976,7 +975,7 @@
         "type": "function",
         "z": "d962963bfcd65845",
         "name": "function 1",
-        "func": "\nreturn !msg.payload.enabled;",
+        "func": "return { payload: { \"enabled\": !msg.payload.enabled } };\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -987,7 +986,8 @@
         "y": 600,
         "wires": [
             [
-                "bb5ada2aa18077f6"
+                "bb5ada2aa18077f6",
+                "6f3483832179cc8b"
             ]
         ]
     },
