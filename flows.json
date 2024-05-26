@@ -540,8 +540,7 @@
         "y": 280,
         "wires": [
             [
-                "68aea32965b364c3",
-                "6f3483832179cc8b"
+                "68aea32965b364c3"
             ]
         ]
     },
@@ -860,7 +859,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 130,
+        "x": 140,
         "y": 680,
         "wires": [
             [
@@ -882,7 +881,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 690,
-        "y": 200,
+        "y": 600,
         "wires": []
     },
     {
@@ -893,7 +892,7 @@
         "property": "payload",
         "action": "obj",
         "pretty": false,
-        "x": 460,
+        "x": 470,
         "y": 680,
         "wires": [
             [
@@ -942,6 +941,39 @@
         "y": 800,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "01f355f92e9ebdb8",
+        "type": "http in",
+        "z": "d962963bfcd65845",
+        "name": "do-not-disturb",
+        "url": "/do-not-disturb",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 600,
+        "wires": [
+            [
+                "75bb1297327af4e4"
+            ]
+        ]
+    },
+    {
+        "id": "75bb1297327af4e4",
+        "type": "json",
+        "z": "d962963bfcd65845",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 470,
+        "y": 600,
+        "wires": [
+            [
+                "6f3483832179cc8b"
+            ]
         ]
     },
     {
