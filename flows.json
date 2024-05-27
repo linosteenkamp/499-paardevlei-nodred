@@ -568,7 +568,7 @@
         "type": "function",
         "z": "d962963bfcd65845",
         "name": "",
-        "func": "var led = flow.get(\"led\");\nvar doNotDisturb = global.get(\"do-not-disturb\")\n\nif (led === undefined) {\n    led = {\n        \"state\": \"OFF\"\n    }\n}\n\nif (!doNotDisturb && msg.payload.illuminance <=35 && msg.payload.occupancy === true)\n{\n    msg = { payload: { \"state\": \"ON\" } };\n    return msg;\n}\n// if (!doNotDisturb && led.state == \"ON\" && msg.payload.occupancy === true)\n// {\n//     msg = { payload: { \"state\": \"ON\" } };\n//     return msg;\n// }\n",
+        "func": "var led = flow.get(\"led\");\nvar doNotDisturb = global.get(\"do-not-disturb\")\n\nif (led === undefined) {\n    led = {\n        \"state\": \"OFF\"\n    }\n}\n\nif (!doNotDisturb && msg.payload.illuminance <=35 && msg.payload.occupancy === true)\n{\n    msg = { payload: { \"state\": \"ON\" } };\n    return msg;\n}\nif (!doNotDisturb && led.state == \"ON\" && msg.payload.occupancy === true)\n{\n    msg = { payload: { \"state\": \"ON\" } };\n    return msg;\n}\n",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
